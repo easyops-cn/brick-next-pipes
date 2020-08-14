@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "env": { "es6": true, "jest": true },
+  "parserOptions": { "ecmaVersion": 9, "sourceType": "module" },
+  "overrides": [
+    { "files": ["*.config.js"], "env": { "node": true, "browser": false } }
+  ],
+  "parser": "@typescript-eslint/parser"
+}
