@@ -20,8 +20,7 @@
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
   "files": [
-    "dist/esm",
-    "dist/cjs"
+    "dist"
   ],
   "devDependencies": {
     "@babel/core": "^7.11.1",
