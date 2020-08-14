@@ -1,4 +1,4 @@
-# Brick Next Pipes
+# Brick Next Pipes [![Build Status](https://travis-ci.com/easyops-cn/brick-next-pipes.svg?branch=master)](https://travis-ci.com/easyops-cn/brick-next-pipes) [![Coverage Status](https://coveralls.io/repos/github/easyops-cn/brick-next-pipes/badge.svg)](https://coveralls.io/github/easyops-cn/brick-next-pipes)
 
 ## Usage
 
