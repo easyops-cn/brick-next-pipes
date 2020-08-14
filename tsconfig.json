@@ -11,7 +11,7 @@
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": false,
-    "outDir": "dist"
+    "outDir": "dist/esm"
   },
   "include": ["src"]
 }

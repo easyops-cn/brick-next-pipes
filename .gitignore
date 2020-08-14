@@ -3,6 +3,6 @@
 .idea
 .vscode
 *.log
-dist
+/dist
 node_modules
 report.*.json
