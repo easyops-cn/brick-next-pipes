@@ -4,6 +4,8 @@ node_js:
 cache: npm
 install:
   - npm install
+before_script:
+  - export TZ=Asia/Shanghai
 script:
   - npm run build
   - npm test
