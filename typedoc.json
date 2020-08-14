@@ -1,0 +1,7 @@
+{
+  "inputFiles": ["./src"],
+  "out": "docs",
+  "exclude": "**/*.spec.ts",
+  "mode": "modules",
+  "theme": "minimal"
+}

@@ -4,5 +4,6 @@
 .vscode
 *.log
 /dist
+/docs
 node_modules
 report.*.json

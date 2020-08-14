@@ -12,6 +12,10 @@ import { pipes } from "@easyops-cn/brick-next-pipes";
 const stringified = pipes.yamlStringify(yourObject);
 ```
 
+## Documentation
+
+https://easyops-cn.github.io/brick-next-pipes/
+
 ## Development
 
 ```shell

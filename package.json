@@ -14,7 +14,9 @@
     "build": "concurrently -n esm,cjs \"npm run build:esm\" \"npm run build:cjs\"",
     "build:esm": "tsc",
     "build:cjs": "tsc --project tsconfig.cjs.json",
-    "coveralls": "coveralls < .coverage/lcov.info"
+    "build:docs": "typedoc",
+    "coveralls": "coveralls < .coverage/lcov.info",
+    "deploy": "typedoc && gh-pages -d docs -r https://$GH_TOKEN@github.com/@easyops-cn/brick-next-pipes.git"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -46,6 +48,7 @@
     "moment": "^2.27.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "typedoc": "^0.18.0",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
