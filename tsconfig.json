@@ -10,6 +10,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "strict": true,
+    "strictNullChecks": false,
     "outDir": "dist"
   },
   "include": ["src"]
