@@ -1,5 +1,17 @@
 # Brick Next Pipes
 
+## Usage
+
+```shell
+npm install --save @easyops-cn/brick-next-pipes
+```
+
+```ts
+import { pipes } from "@easyops-cn/brick-next-pipes";
+
+const stringified = pipes.yamlStringify(yourObject);
+```
+
 ## Development
 
 ```shell
@@ -17,5 +29,5 @@ npm test
 
 ```shell
 npm run build
-npm publish
+npm publish --access public
 ```

@@ -1,4 +1,4 @@
-import { unitFormat } from "./index";
+import { unitFormat } from "./unitFormat";
 
 describe("unitFormat", () => {
   const testCases: [
