@@ -16,7 +16,8 @@
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:docs": "typedoc",
     "coveralls": "coveralls < .coverage/lcov.info",
-    "deploy": "typedoc && touch docs/.nojekyll && gh-pages --dotfiles -d docs -r https://$GH_TOKEN@github.com/easyops-cn/brick-next-pipes.git"
+    "deploy": "typedoc && touch docs/.nojekyll && gh-pages --dotfiles -d docs -r https://$GH_TOKEN@github.com/easyops-cn/brick-next-pipes.git",
+    "release": "standard-version"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -49,6 +50,7 @@
     "moment": "^2.27.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "standard-version": "^9.0.0",
     "typedoc": "^0.18.0",
     "typescript": "^3.9.7"
   },
