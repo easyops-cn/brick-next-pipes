@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "importHelpers": true,
     "moduleResolution": "node",
@@ -13,5 +14,6 @@
     "strictNullChecks": false,
     "outDir": "dist/esm"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }

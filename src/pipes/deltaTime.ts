@@ -1,6 +1,6 @@
 import moment from "moment";
 
-interface Period {
+export interface Period {
   startTime?: number | string;
   endTime?: number | string;
 }

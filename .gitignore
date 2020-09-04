@@ -1,9 +1,9 @@
 .coverage
 .DS_Store
 .idea
-.vscode
 *.log
 /dist
 /docs
+/temp
 node_modules
 report.*.json
