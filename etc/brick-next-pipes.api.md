@@ -16,20 +16,20 @@ import { keyBy } from 'lodash';
 import { uniq } from 'lodash';
 
 // @public
-export function add(x: number | string, y: number | string): number | string;
+export function add(value: number | string, operand: number | string): number | string;
 
-// @public (undocumented)
+// @public
 export function boolean(value: unknown): boolean;
 
-// @public (undocumented)
+// @public
 export function cmdbInstanceShowName(value: unknown): unknown;
 
 export { countBy }
 
-// @public (undocumented)
+// @public
 export function datetime(value: number | string, format: string): string;
 
-// @public (undocumented)
+// @public
 export function deltaTime(time: number | string | Period, withSuffix?: boolean, format?: string): string;
 
 // @public (undocumented)
@@ -99,7 +99,7 @@ export function number(value: unknown): number;
 // @public (undocumented)
 export function parseTimeRange(value: string): number;
 
-// @public (undocumented)
+// @public
 export interface Period {
     // (undocumented)
     endTime?: number | string;

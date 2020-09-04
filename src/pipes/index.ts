@@ -3,7 +3,25 @@
  *
  * @remarks
  *
+ * Usage in Typescript:
+ *
+ * ```ts
+ * import { pipes } from "@easyops-cn/brick-next-pipes";
+ *
+ * const stringified = pipes.yamlStringify(yourObject);
+ * ```
+ *
+ * Usage in Brick Next Evaluations:
+ *
+ * ```
+ * <% yourObject |> PIPES.yamlStringify %>
+ * or
+ * <% PIPES.yamlStringify(yourObject) %>
+ * ```
+ *
  * It also includes these functions transparently exported from lodash:
+ *
+ * {@link https://lodash.com/docs/#countBy | countBy}
  *
  * equal (from {@link https://lodash.com/docs/#isEqual | _.isEqual})
  *
