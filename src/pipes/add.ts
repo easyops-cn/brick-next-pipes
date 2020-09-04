@@ -3,11 +3,14 @@
  *
  * @public
  *
- * @param x - x
- * @param y - y
+ * @param value - Value
+ * @param operand - Operand
  *
- * @returns Do string concatenation if one of arguments is string, or numeric sum if not.
+ * @returns Concatenation of strings if one of arguments is string, or numeric sum if not.
  */
-export function add(x: number | string, y: number | string): number | string {
-  return (x as any) + y;
+export function add(
+  value: number | string,
+  operand: number | string
+): number | string {
+  return (value as any) + operand;
 }
