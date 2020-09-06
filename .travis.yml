@@ -14,9 +14,7 @@ after_success:
   - npm run coveralls
 deploy:
   - provider: script
-    script:
-      - cp _config.yml docs
-      - npm run deploy
+    script: cp _config.yml docs && npm run deploy
     skip_cleanup: true
     on:
       branch: master
