@@ -32,7 +32,7 @@ export function datetime(value: number | string, format: string): string;
 // @public
 export function deltaTime(time: number | string | Period, withSuffix?: boolean, format?: string): string;
 
-// @public (undocumented)
+// @public
 export function divide(value: number, operand: number): number;
 
 export { equal }
@@ -47,56 +47,84 @@ export { findLastIndex }
 
 export { get }
 
-// @public (undocumented)
-export function graphTree(value: {
-    edges: Record<string, any>[];
-    topic_vertices: Record<string, any>[];
-    vertices: Record<string, any>[];
-}, query?: {
-    sort: {
+// @public
+export interface GraphData {
+    // (undocumented)
+    edges: GraphEdge[];
+    // (undocumented)
+    topic_vertices: GraphVertex[];
+    // (undocumented)
+    vertices: GraphVertex[];
+}
+
+// @public
+export interface GraphEdge {
+    // (undocumented)
+    in: string;
+    // (undocumented)
+    out: string;
+    // (undocumented)
+    out_name: string;
+}
+
+// @public
+export interface GraphQuery {
+    // (undocumented)
+    sort?: {
         key: string;
         order: 1 | -1;
     };
-}): Record<string, any>[];
+}
+
+// @public
+export function graphTree(value: GraphData, query?: GraphQuery): GraphVertex[];
+
+// @public
+export interface GraphVertex {
+    // (undocumented)
+    [key: string]: any;
+    // (undocumented)
+    instanceId: string;
+}
 
 export { groupBy }
 
-// @public (undocumented)
+// @public
 export function groupByToIndex(value: Record<string, unknown>[], groupField: string, targetField: string): Record<string, unknown>[];
 
-// @public (undocumented)
+// @public
 export function includes(value: string | unknown[], part: string | unknown): boolean;
 
-// @public (undocumented)
-export function join(value: unknown[], separator: string): string;
+// @public
+export function join(value: unknown[], separator?: string): string;
 
-// @public (undocumented)
+// @public
 export function json(value: string): unknown;
 
-// @public (undocumented)
+// @public
 export function jsonStringify(value: unknown, indent?: number): string;
 
 export { keyBy }
 
-// @public (undocumented)
+// @public
 export function map(value: unknown, key: string): unknown[];
 
-// @public (undocumented)
+// @public
 export function mapToArray(value: unknown, keyField: string, valueField: string): unknown[];
 
-// @public (undocumented)
+// @public
 export function multiply(value: number, operand: number): number;
 
-// @public (undocumented)
+// @public
 export function not(value: unknown): boolean;
 
-// @public (undocumented)
+// @public
 export function nullish<T, U>(value: T, defaultValue: U): T | U;
 
-// @public (undocumented)
+// @public
 export function number(value: unknown): number;
 
-// @public (undocumented)
+// @public
 export function parseTimeRange(value: string): number;
 
 // @public
@@ -107,42 +135,42 @@ export interface Period {
     startTime?: number | string;
 }
 
-// @public (undocumented)
+// @public
 export function reverse<T>(value: T[]): T[];
 
-// @public (undocumented)
+// @public
 export function slice<T>(value: T[], start: number, end?: number): T[];
 
-// @public (undocumented)
+// @public
 export function sort<T>(value: T[], fields?: string | string[]): T[];
 
-// @public (undocumented)
+// @public
 export function split(value: string, separator: string): string[];
 
-// @public (undocumented)
+// @public
 export function string(value: unknown): string;
 
-// @public (undocumented)
+// @public
 export function substr(value: string, from: number, length?: number): string;
 
-// @public (undocumented)
+// @public
 export function substring(value: string, start: number, end?: number): string;
 
-// @public (undocumented)
+// @public
 export function subtract(value: number, operand: number): number;
 
-// @public (undocumented)
+// @public
 export function ternary<T, U>(value: boolean, resultIfTrue: T, resultIfFalse: U): T | U;
 
 export { uniq }
 
-// @public (undocumented)
+// @public
 export function unitFormat(value: number, unit: string, precision?: number): [string, string];
 
-// @public (undocumented)
+// @public
 export function yaml(value: string): unknown;
 
-// @public (undocumented)
+// @public
 export function yamlStringify(value: unknown, indent?: number): string;
 
 

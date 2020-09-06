@@ -2,10 +2,8 @@ import { groupByToIndex } from "./groupByToIndex";
 
 describe("groupByToIndex", () => {
   const testCases: [
-    Record<string, unknown>[],
-    string,
-    string,
-    Record<string, unknown>[]
+    ...Parameters<typeof groupByToIndex>,
+    ReturnType<typeof groupByToIndex>
   ][] = [
     [
       [

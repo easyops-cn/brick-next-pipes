@@ -14,7 +14,7 @@ const stringified = pipes.yamlStringify(yourObject);
 
 ## Documentation
 
-https://easyops-cn.github.io/brick-next-pipes/
+https://easyops-cn.github.io/brick-next-pipes/brick-next-pipes.html
 
 ## Development
 

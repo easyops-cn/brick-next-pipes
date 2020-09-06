@@ -1,5 +1,18 @@
 import { safeLoad, JSON_SCHEMA } from "js-yaml";
 
+/**
+ * Parse a YAML formatted string.
+ *
+ * @public
+ *
+ * @remarks
+ *
+ * Returns `undefined` if parse failed.
+ *
+ * @param value - A YAML formatted string
+ *
+ * @returns The parsed value
+ */
 export function yaml(value: string): unknown {
   let result;
   try {
