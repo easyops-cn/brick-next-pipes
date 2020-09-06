@@ -13,6 +13,7 @@ import { findLastIndex } from 'lodash';
 import { get } from 'lodash';
 import { groupBy } from 'lodash';
 import { keyBy } from 'lodash';
+import { round } from 'lodash';
 import { uniq } from 'lodash';
 
 // @public
@@ -137,6 +138,8 @@ export interface Period {
 
 // @public
 export function reverse<T>(value: T[]): T[];
+
+export { round }
 
 // @public
 export function slice<T>(value: T[], start: number, end?: number): T[];
