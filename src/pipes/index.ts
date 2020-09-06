@@ -19,7 +19,7 @@
  * <% PIPES.yamlStringify(yourObject) %>
  * ```
  *
- * It also includes these functions transparently exported from lodash:
+ * It also transparently exports these functions from lodash:
  *
  * {@link https://lodash.com/docs/#countBy | countBy}
  *

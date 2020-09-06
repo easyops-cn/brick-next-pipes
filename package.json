@@ -18,7 +18,7 @@
     "build:docs:dev": "api-extractor run --local --verbose && npm run docs:gen",
     "docs:gen": "api-documenter markdown --input-folder temp --output-folder docs",
     "coveralls": "coveralls < .coverage/lcov.info",
-    "deploy": "gh-pages -d docs -r https://$GH_TOKEN@github.com/easyops-cn/brick-next-pipes.git",
+    "deploy": "gh-pages --no-history -d docs -r https://$GH_TOKEN@github.com/easyops-cn/brick-next-pipes.git",
     "release": "standard-version"
   },
   "main": "dist/cjs/index.js",
