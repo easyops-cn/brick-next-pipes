@@ -41,6 +41,7 @@
  *
  * {@link https://lodash.com/docs/#uniq | uniq}
  *
+ *{@link https://lodash.com/docs/#round | round}
  *
  * @packageDocumentation
  */
@@ -85,3 +86,4 @@ export * from "./uniq";
 export * from "./unitFormat";
 export * from "./yaml";
 export * from "./yamlStringify";
+export * from "./round";
