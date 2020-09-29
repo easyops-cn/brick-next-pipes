@@ -23,6 +23,13 @@ npm install
 npm start
 ```
 
+## Before PR
+
+```shell
+# This will update `etc/*.md`.
+npm run build && npm run build:docs:dev
+```
+
 ## Testing
 
 ```shell
