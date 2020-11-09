@@ -2,6 +2,8 @@
  * Determines whether an array includes an item or
  * a string includes a partial string.
  *
+ * @category Array
+ *
  * @public
  *
  * @param value - A string or an array

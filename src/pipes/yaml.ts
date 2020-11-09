@@ -3,6 +3,8 @@ import { safeLoad, JSON_SCHEMA } from "js-yaml";
 /**
  * Parse a YAML formatted string.
  *
+ * @category Serialization
+ *
  * @public
  *
  * @remarks

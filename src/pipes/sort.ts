@@ -4,6 +4,8 @@ import { sortBy } from "lodash";
  * Returns a copy of an array, sorted in ascending order
  * by the specific property of each elements of the array.
  *
+ * @category Array
+ *
  * @public
  *
  * @param value - The input array

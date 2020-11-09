@@ -1,6 +1,8 @@
 /**
  * Divides a string into an ordered list of substrings.
  *
+ * @category String
+ *
  * @public
  *
  * @remarks

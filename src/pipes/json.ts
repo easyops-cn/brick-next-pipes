@@ -3,6 +3,8 @@ import { isNil } from "lodash";
 /**
  * Parse a JSON formatted string.
  *
+ * @category Serialization
+ *
  * @public
  *
  * @remarks

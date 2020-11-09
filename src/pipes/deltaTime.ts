@@ -21,6 +21,8 @@ function getMoment(input: number | string, format: string): moment.Moment {
 /**
  * Get a humanized time period.
  *
+ * @category Datetime
+ *
  * @public
  *
  * @example

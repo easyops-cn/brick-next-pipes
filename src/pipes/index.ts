@@ -19,30 +19,6 @@
  * <% PIPES.yamlStringify(yourObject) %>
  * ```
  *
- * It also transparently exports these functions from lodash:
- *
- * {@link https://lodash.com/docs/#countBy | countBy}
- *
- * equal (from {@link https://lodash.com/docs/#isEqual | _.isEqual})
- *
- * {@link https://lodash.com/docs/#find | find}
- *
- * {@link https://lodash.com/docs/#findIndex | findIndex}
- *
- * {@link https://lodash.com/docs/#findLast | findLast}
- *
- * {@link https://lodash.com/docs/#findLastIndex | findLastIndex}
- *
- * {@link https://lodash.com/docs/#get | get}
- *
- * {@link https://lodash.com/docs/#groupBy | groupBy}
- *
- * {@link https://lodash.com/docs/#keyBy | keyBy}
- *
- * {@link https://lodash.com/docs/#uniq | uniq}
- *
- *{@link https://lodash.com/docs/#round | round}
- *
  * @packageDocumentation
  */
 export * from "./add";

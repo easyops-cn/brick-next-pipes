@@ -4,18 +4,6 @@
 
 ```ts
 
-import { countBy } from 'lodash';
-import { isEqual as equal } from 'lodash';
-import { find } from 'lodash';
-import { findIndex } from 'lodash';
-import { findLast } from 'lodash';
-import { findLastIndex } from 'lodash';
-import { get } from 'lodash';
-import { groupBy } from 'lodash';
-import { keyBy } from 'lodash';
-import { round } from 'lodash';
-import { uniq } from 'lodash';
-
 // @public
 export function add(value: number | string, operand: number | string): number | string;
 
@@ -30,7 +18,8 @@ export function boolean(value: unknown): boolean;
 // @public
 export function cmdbInstanceShowName(value: unknown): unknown;
 
-export { countBy }
+// @public
+export function countBy(collection: unknown[] | Record<string, unknown>, iteratee: string | number): Record<string, number>;
 
 // @public
 export function datetime(value: number | string, format: string): string;
@@ -41,17 +30,23 @@ export function deltaTime(time: number | string | Period, withSuffix?: boolean, 
 // @public
 export function divide(value: number, operand: number): number;
 
-export { equal }
+// @public
+export function equal(value: unknown, other: unknown): boolean;
 
-export { find }
+// @public
+export function find(collection: unknown[] | Record<string, unknown>, predict: string | number | Record<string, unknown> | [string | number, unknown], fromIndex?: number): unknown;
 
-export { findIndex }
+// @public
+export function findIndex(array: unknown[], predict: string | number | Record<string, unknown> | [string | number, unknown], fromIndex?: number): number;
 
-export { findLast }
+// @public
+export function findLast(collection: unknown[] | Record<string, unknown>, predict: string | number | Record<string, unknown> | [string | number, unknown], fromIndex?: number): unknown;
 
-export { findLastIndex }
+// @public
+export function findLastIndex(array: unknown[], predict: string | number | Record<string, unknown> | [string | number, unknown], fromIndex?: number): number;
 
-export { get }
+// @public
+export function get(object: Record<string, unknown>, path: string | string[], defaultValue: unknown): unknown;
 
 // @public
 export interface GraphData {
@@ -93,7 +88,8 @@ export interface GraphVertex {
     instanceId: string;
 }
 
-export { groupBy }
+// @public
+export function groupBy(collection: unknown[] | Record<string, unknown>, iteratee: string | number): Record<string, unknown[]>;
 
 // @public
 export function groupByToIndex(value: Record<string, unknown>[], groupField: string, targetField: string): Record<string, unknown>[];
@@ -110,13 +106,14 @@ export function json(value: string): unknown;
 // @public
 export function jsonStringify(value: unknown, indent?: number): string;
 
-export { keyBy }
+// @public
+export function keyBy(collection: unknown[] | Record<string, unknown>, iteratee: string | number): Record<string, unknown>;
 
 // @public
-export function map(value: unknown, key: string): unknown[];
+export function map(value: unknown[], key: string): unknown[];
 
 // @public
-export function mapToArray(value: unknown, keyField: string, valueField: string): unknown[];
+export function mapToArray(value: Record<string, unknown>, keyField: string, valueField: string): unknown[];
 
 // @public
 export function multiply(value: number, operand: number): number;
@@ -144,7 +141,8 @@ export interface Period {
 // @public
 export function reverse<T>(value: T[]): T[];
 
-export { round }
+// @public
+export function round(n: number, precision?: number): number;
 
 // @public
 export function slice<T>(value: T[], start: number, end?: number): T[];
@@ -170,7 +168,8 @@ export function subtract(value: number, operand: number): number;
 // @public
 export function ternary<T, U>(value: boolean, resultIfTrue: T, resultIfFalse: U): T | U;
 
-export { uniq }
+// @public
+export function uniq<T>(array: T[]): T[];
 
 // @public
 export function unitFormat(value: number, unit: string, precision?: number): [string, string];

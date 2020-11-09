@@ -1,6 +1,8 @@
 /**
  * Convert the input value to a number.
  *
+ * @category Type conversion
+ *
  * @public
  *
  * @param value - The input value

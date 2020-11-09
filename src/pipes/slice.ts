@@ -1,6 +1,8 @@
 /**
  * Returns a shallow copy of a portion of an array.
  *
+ * @category Array
+ *
  * @public
  *
  * @remarks

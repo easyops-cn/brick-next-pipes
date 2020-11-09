@@ -1,6 +1,8 @@
 /**
  * Convert the input value to a string.
  *
+ * @category Type conversion
+ *
  * @public
  *
  * @remarks Returns `""` if the input is `null` or `undefined`.

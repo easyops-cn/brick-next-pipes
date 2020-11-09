@@ -1,6 +1,8 @@
 /**
  * The multiplication operator (`*`) produces the product of the operands.
  *
+ * @category Mathematics
+ *
  * @public
  *
  * @param value - The multiplicand

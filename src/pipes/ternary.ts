@@ -1,6 +1,8 @@
 /**
  * Returns certain value by checking the input value is truthy or falsy.
  *
+ * @category Logic
+ *
  * @public
  *
  * @param value - The condition

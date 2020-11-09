@@ -3,6 +3,8 @@ import moment from "moment";
 /**
  * Format a datetime (using locale timezone).
  *
+ * @category Datetime
+ *
  * @public
  *
  * @example
