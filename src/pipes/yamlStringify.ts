@@ -3,6 +3,8 @@ import { safeDump, JSON_SCHEMA } from "js-yaml";
 /**
  * Stringify a value into YAML.
  *
+ * @category Serialization
+ *
  * @public
  *
  * @remarks

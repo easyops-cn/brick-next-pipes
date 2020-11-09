@@ -56,6 +56,8 @@ export interface GraphQuery {
 /**
  * Produces the tree hierarchy data from graph data.
  *
+ * @category Others
+ *
  * @public
  *
  * @example

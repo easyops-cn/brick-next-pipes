@@ -3,6 +3,8 @@ import { formatUnitValue } from "../utils";
 /**
  * Format a unit value.
  *
+ * @category Others
+ *
  * @public
  *
  * @example

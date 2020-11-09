@@ -1,6 +1,8 @@
 /**
  * Returns a new string by concatenating all of the elements in an array
  *
+ * @category Array
+ *
  * @remarks Returns an empty string if the input is not array.
  *
  * @public

@@ -1,6 +1,8 @@
 /**
  * Convert a value to boolean (Alias as `bool`).
  *
+ * @category Type conversion
+ *
  * @public
  *
  * @remarks Consider `"0"` as false.

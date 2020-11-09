@@ -4,6 +4,8 @@ import { isNil, groupBy, keys, set, indexOf, get } from "lodash";
  * Returns a copy of an array, inserting a index property
  * to each elements of the input array.
  *
+ * @category Others
+ *
  * @public
  *
  * @remarks

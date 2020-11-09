@@ -1,6 +1,8 @@
 /**
  * The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa.
  *
+ * @category Logic
+ *
  * @public
  *
  * @param value - The input value

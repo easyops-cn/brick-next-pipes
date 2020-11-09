@@ -1,6 +1,8 @@
 /**
  * Creates a reversed copy of an array.
  *
+ * @category Array
+ *
  * @public
  *
  * @remarks

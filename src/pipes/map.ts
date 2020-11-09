@@ -4,6 +4,8 @@ import { get } from "lodash";
  * Creates a new array by populated with the specific property
  * of each items of the calling array.
  *
+ * @category Array
+ *
  * @public
  *
  * @remarks
@@ -27,6 +29,6 @@ import { get } from "lodash";
  *
  * @returns The new mapped array
  */
-export function map(value: unknown, key: string): unknown[] {
+export function map(value: unknown[], key: string): unknown[] {
   return Array.isArray(value) ? value.map((item) => get(item, key)) : [];
 }

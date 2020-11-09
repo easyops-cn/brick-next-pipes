@@ -5,5 +5,7 @@
 /dist
 /docs
 /temp
+/api
+/scripts-dist
 node_modules
 report.*.json

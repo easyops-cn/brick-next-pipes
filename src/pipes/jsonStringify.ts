@@ -1,6 +1,8 @@
 /**
  * Stringify a value into JSON.
  *
+ * @category Serialization
+ *
  * @public
  *
  * @remarks

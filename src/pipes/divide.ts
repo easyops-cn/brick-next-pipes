@@ -2,6 +2,8 @@
  * The division operator (`/`) produces the quotient of its operands where
  * the left operand is the dividend and the right operand is the divisor.
  *
+ * @category Mathematics
+ *
  * @public
  *
  * @param value - The dividend

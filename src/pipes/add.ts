@@ -1,6 +1,8 @@
 /**
  * The addition operator (`+`) produces the sum of numeric operands or string concatenation.
  *
+ * @category Mathematics
+ *
  * @remarks
  *
  * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition}

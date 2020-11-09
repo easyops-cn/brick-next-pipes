@@ -1,6 +1,8 @@
 /**
  * The subtraction operator (`-`) subtracts the two operands, producing their difference.
  *
+ * @category Mathematics
+ *
  * @public
  *
  * @param value - Value

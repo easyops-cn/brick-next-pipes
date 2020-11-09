@@ -6,7 +6,7 @@ describe("mapToArray", () => {
     ReturnType<typeof mapToArray>
   ][] = [
     [[null, "", ""], []],
-    [["23", "", ""], []],
+    [["23" as any, "", ""], []],
     [
       [{ HOST: "主机", APP: "应用" }, "id", "label"],
       [

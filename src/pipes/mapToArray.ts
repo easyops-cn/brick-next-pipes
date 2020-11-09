@@ -1,6 +1,8 @@
 /**
  * Creates an array of key-value pairs from the entries of an object.
  *
+ * @category Others
+ *
  * @public
  *
  * @example
@@ -22,7 +24,7 @@
  * @returns The new array of key-value pairs
  */
 export function mapToArray(
-  value: unknown,
+  value: Record<string, unknown>,
   keyField: string,
   valueField: string
 ): unknown[] {

@@ -1,6 +1,8 @@
 /**
  * Get the display name of a CMDB instance from its properties.
  *
+ * @category Others
+ *
  * @public
  *
  * @example

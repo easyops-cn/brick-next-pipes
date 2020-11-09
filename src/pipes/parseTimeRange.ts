@@ -3,6 +3,8 @@ import moment, { DurationInputArg2 } from "moment";
 /**
  * Parse a time range.
  *
+ * @category Datetime
+ *
  * @public
  *
  * @remarks
