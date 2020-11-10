@@ -54,7 +54,7 @@ export interface GraphQuery {
 }
 
 /**
- * Produces the tree hierarchy data from graph data.
+ * 将{@link http://192.168.100.162/next/developers/providers/cmdb/instance-graph-api-traverse-graph | 图遍历查询接口}返回的图数据转换为树结构数据。
  *
  * @category Others
  *
@@ -105,10 +105,10 @@ export interface GraphQuery {
  * // ]
  * ```
  *
- * @param value - The graph data
- * @param query - The graph query (includes sort)
+ * @param value - 图数据。
+ * @param query - 图查询条件及排序等。
  *
- * @returns The tree hierarchy data
+ * @returns 树结构数据。
  */
 export function graphTree(value: GraphData, query?: GraphQuery): GraphVertex[] {
   if (!value) {

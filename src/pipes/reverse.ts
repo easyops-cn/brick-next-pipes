@@ -1,18 +1,13 @@
 /**
- * Creates a reversed copy of an array.
+ * 返回一个数组倒转之后的新数组。
  *
  * @category Array
  *
  * @public
  *
- * @remarks
+ * @param value - 数组。
  *
- * The original array will not be modified.
- * Returns `[]` if the input is not an array.
- *
- * @param value - The input array
- *
- * @returns The reversed array
+ * @returns 倒转后的新数组，如果输入不是数组则返回空数组。
  */
 export function reverse<T>(value: T[]): T[] {
   return Array.isArray(value) ? value.slice().reverse() : [];

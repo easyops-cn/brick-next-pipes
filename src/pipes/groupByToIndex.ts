@@ -1,8 +1,7 @@
 import { isNil, groupBy, keys, set, indexOf, get } from "lodash";
 
 /**
- * Returns a copy of an array, inserting a index property
- * to each elements of the input array.
+ * 返回一个数组的拷贝，并为每个元素新增一个分组索引字段。
  *
  * @category Others
  *
@@ -10,7 +9,7 @@ import { isNil, groupBy, keys, set, indexOf, get } from "lodash";
  *
  * @remarks
  *
- * The inserted index is ascending sorted by the grouped property.
+ * 新增的分组索引按分组属性升序排列。
  *
  * @example
  *
@@ -28,11 +27,11 @@ import { isNil, groupBy, keys, set, indexOf, get } from "lodash";
  * // ]`
  * ```
  *
- * @param value - The input array
- * @param groupField - The property name to be grouped
- * @param targetField - The index property to be inserted
+ * @param value - 对象数组。
+ * @param groupField - 要分组的属性名。
+ * @param targetField - 要新增的分组索引属性名。
  *
- * @returns The group-indexed copy of array
+ * @returns 增加了分组索引属性的新数组。
  */
 export function groupByToIndex(
   value: Record<string, unknown>[],

@@ -1,14 +1,14 @@
 /**
- * The subtraction operator (`-`) subtracts the two operands, producing their difference.
+ * 数学减法。
  *
  * @category Mathematics
  *
  * @public
  *
- * @param value - Value
- * @param operand - Operand
+ * @param value - 被减数。
+ * @param operand - 减数。
  *
- * @returns The difference of the operands.
+ * @returns 差。
  */
 export function subtract(value: number, operand: number): number {
   return value - operand;

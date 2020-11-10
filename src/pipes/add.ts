@@ -1,15 +1,15 @@
 /**
- * The addition operator (`+`) produces the sum of numeric operands or string concatenation.
+ * 数学加法或字符串拼接。
  *
  * @category Mathematics
  *
  * @remarks
  *
- * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition}
+ * 详见 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition}。
  *
  * @example
  *
- * Numeric addition:
+ * 数学加法：
  *
  * ```ts
  * // Number + Number -> addition
@@ -22,7 +22,7 @@
  * false + false // 0
  * ```
  *
- * String concatenation:
+ * 字符串拼接：
  *
  * ```ts
  * // String + String -> concatenation
@@ -37,10 +37,10 @@
  *
  * @public
  *
- * @param value - Value
- * @param operand - Operand
+ * @param value - 值。
+ * @param operand - 操作数。
  *
- * @returns Concatenation of strings if one of arguments is string, or numeric sum if not.
+ * @returns 如果其中一个参数为字符串，返回字符串，否则返回数字。
  */
 export function add(
   value: number | string,

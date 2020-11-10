@@ -1,18 +1,19 @@
 import { findLastIndex as _findLastIndex } from "lodash";
 
 /**
- * This method is like _.findIndex except that it iterates over elements of collection from right to left.
+ * 从一个数组中从后向前找到第一个匹配的元素的位置。
  *
  * @category Array
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#findLastIndex | _.findLastIndex}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#findLastIndex | _.findLastIndex}。
  *
  * @public
  *
- * @param array - The array to search.
- * @param predicate - The function invoked per iteration.
- * @param fromIndex - The index to search from.
- * @returns Returns the index of the found element, else -1.
+ * @param array - 要搜索的数组。
+ * @param predicate - 需要匹配的条件。
+ * @param fromIndex - 从哪个位置开始搜索。
+ *
+ * @returns 返回找到的元素的位置，没有找到时返回 `-1`。s
  */
 export function findLastIndex(
   array: unknown[],

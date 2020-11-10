@@ -16,7 +16,7 @@ export const bool: typeof boolean;
 export function boolean(value: unknown): boolean;
 
 // @public
-export function cmdbInstanceShowName(value: unknown): unknown;
+export function cmdbInstanceShowName(value: string | string[]): string;
 
 // @public
 export function countBy(collection: unknown[] | Record<string, unknown>, iteratee: string | number): Record<string, number>;
@@ -113,7 +113,7 @@ export function keyBy(collection: unknown[] | Record<string, unknown>, iteratee:
 export function map(value: unknown[], key: string): unknown[];
 
 // @public
-export function mapToArray(value: Record<string, unknown>, keyField: string, valueField: string): unknown[];
+export function mapToArray(data: Record<string, unknown>, keyField: string, valueField: string): unknown[];
 
 // @public
 export function multiply(value: number, operand: number): number;

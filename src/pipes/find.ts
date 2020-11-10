@@ -1,19 +1,19 @@
 import { find as _find } from "lodash";
 
 /**
- * Iterates over elements of collection, returning the first element predicate returns truthy for.
- * The predicate is invoked with three arguments: (value, index|key, collection).
+ * 从一个数据集合中找到第一个匹配的元素。
  *
  * @category Collection
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#find | _.find}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#find | _.find}。
  *
  * @public
  *
- * @param collection - The collection to search.
- * @param predicate - The function invoked per iteration.
- * @param fromIndex - The index to search from.
- * @returns Returns the matched element, else undefined.
+ * @param collection - 要搜索的集合。
+ * @param predicate - 需要匹配的条件。
+ * @param fromIndex - 从哪个位置开始搜索。
+ *
+ * @returns 返回找到的元素，没有找到时返回 `undefined`。
  */
 export function find(
   collection: unknown[] | Record<string, unknown>,

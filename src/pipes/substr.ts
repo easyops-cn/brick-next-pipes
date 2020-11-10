@@ -1,6 +1,5 @@
 /**
- * Returns a portion of the string, starting at the specified index
- * and extending for a given number of characters afterwards.
+ * 根据指定起始位置和长度返回一个字符串的子串。
  *
  * @category String
  *
@@ -8,14 +7,13 @@
  *
  * @remarks
  *
- * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr}
- * Returns `[]` if the input is not a string.
+ * 详见 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr}。
  *
- * @param value - The input string
- * @param from - The index of the first character to include in the returned substring
- * @param length - The number of characters to extract
+ * @param value - 字符串。
+ * @param from - 返回的子串的起始位置。
+ * @param length - 返回的子串的长度。
  *
- * @returns A new string containing the specified part of the given string
+ * @returns 子串。
  */
 export function substr(value: string, from: number, length?: number): string {
   return typeof value === "string" ? value.substr(from, length) : "";

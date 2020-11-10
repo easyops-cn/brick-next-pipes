@@ -1,18 +1,14 @@
 /**
- * Stringify a value into JSON.
+ * 将一个值转换为 JSON 格式的字符串（序列化）。
  *
  * @category Serialization
  *
  * @public
  *
- * @remarks
+ * @param value - 输入值。
+ * @param indent - 空格缩进数量（默认为 `2`）。
  *
- * Returns `undefined` if stringify failed (e.g. includes circular refs).
- *
- * @param value - A value to be stringified
- * @param indent - The space indention (defaults to `2`)
- *
- * @returns The stringified value
+ * @returns 序列化后的字符串；如果序列化失败（例如包含循环引用）返回 `undefined`。
  */
 export function jsonStringify(value: unknown, indent = 2): string {
   try {

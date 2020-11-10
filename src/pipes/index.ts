@@ -1,9 +1,9 @@
 /**
- * A library of pipes for Brick Next.
+ * 用于 Brick Next 的 Pipes 管道列表。源代码托管在 GitHub {@link https://github.com/easyops-cn/brick-next-pipes | easyops-cn/brick-next-pipes}。
  *
  * @remarks
  *
- * Usage in Typescript:
+ * 使用 TypeScript：
  *
  * ```ts
  * import { pipes } from "@easyops-cn/brick-next-pipes";
@@ -11,12 +11,20 @@
  * const stringified = pipes.yamlStringify(yourObject);
  * ```
  *
- * Usage in Brick Next Evaluations:
+ * 在编排中使用求值占位符：
  *
+ * ```yaml
+ * prop: "<% yourObject |> PIPES.yamlStringify %>"
+ * # or
+ * prop: "<% PIPES.yamlStringify(yourObject) %>"
  * ```
- * <% yourObject |> PIPES.yamlStringify %>
- * or
- * <% PIPES.yamlStringify(yourObject) %>
+ *
+ * 在编排中使用注入占位符或 Transform：
+ *
+ * ```yaml
+ * prop: "${ yourObject | yamlStringify }"
+ * # or
+ * prop: "@{ yourObject | yamlStringify }"
  * ```
  *
  * @packageDocumentation

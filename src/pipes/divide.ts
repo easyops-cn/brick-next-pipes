@@ -1,15 +1,14 @@
 /**
- * The division operator (`/`) produces the quotient of its operands where
- * the left operand is the dividend and the right operand is the divisor.
+ * 数学除法。
  *
  * @category Mathematics
  *
  * @public
  *
- * @param value - The dividend
- * @param operand - The divisor
+ * @param value - 被除数。
+ * @param operand - 除数。
  *
- * @returns The quotient of the operands.
+ * @returns 商。
  */
 export function divide(value: number, operand: number): number {
   return value / operand;

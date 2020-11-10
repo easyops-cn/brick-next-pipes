@@ -1,5 +1,5 @@
 /**
- * Returns a shallow copy of a portion of an array.
+ * 根据起始位置和结束位置（不包含）返回一个数组的一部分。
  *
  * @category Array
  *
@@ -7,15 +7,13 @@
  *
  * @remarks
  *
- * The new array is selected from `start` to `end` (`end` not included)
- * where `start` and `end` represent the index of items in that array.
- * The original array will not be modified. See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice}
+ * 详见 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice}。
  *
- * @param value - The input array
- * @param start - Zero-based index at which to start extraction
- * @param end - Zero-based index before which to end extraction
+ * @param value - 输入数组。
+ * @param start - 要开始提取的索引位置。
+ * @param end - 结束提取的索引位置。
  *
- * @returns A new array containing the extracted elements
+ * @returns 新数组。
  */
 export function slice<T>(value: T[], start: number, end?: number): T[] {
   return value.slice(start, end);

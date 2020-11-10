@@ -1,21 +1,15 @@
 import { isNil } from "lodash";
 
 /**
- * Parse a JSON formatted string.
+ * 解析一个 JSON 格式的字符串（反序列化）。
  *
  * @category Serialization
  *
  * @public
  *
- * @remarks
+ * @param value - JSON 格式的字符串。
  *
- * Returns the input itself if the input is `null` or `undefined`.
- *
- * Returns `undefined` if parse failed.
- *
- * @param value - A JSON formatted string
- *
- * @returns The parsed value
+ * @returns 返回解析后的值；如果解析失败返回 `undefined`；如果输入为 `null` 或 `undefined` 返回原输入。
  */
 export function json(value: string): unknown {
   if (isNil(value)) return value;

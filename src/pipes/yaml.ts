@@ -1,19 +1,15 @@
 import { safeLoad, JSON_SCHEMA } from "js-yaml";
 
 /**
- * Parse a YAML formatted string.
+ * 解析一个 YAML 格式的字符串（反序列化）。
  *
  * @category Serialization
  *
  * @public
  *
- * @remarks
+ * @param value - YAML 格式的字符串。
  *
- * Returns `undefined` if parse failed.
- *
- * @param value - A YAML formatted string
- *
- * @returns The parsed value
+ * @returns 返回解析后的值，如果解析失败返回 `undefined`。
  */
 export function yaml(value: string): unknown {
   let result;

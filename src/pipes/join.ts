@@ -1,16 +1,16 @@
 /**
- * Returns a new string by concatenating all of the elements in an array
+ * 将一个数组的所有元素拼接成字符串。
  *
  * @category Array
  *
- * @remarks Returns an empty string if the input is not array.
+ * @remarks 当输入值不是数组时返回空字符串。
  *
  * @public
  *
- * @param value - The items to join
- * @param separator - The separator (defaults to `","`)
+ * @param value - 数组。
+ * @param separator - 分隔符号（默认为 `","`）。
  *
- * @returns The string joined
+ * @returns 拼接后的字符串。
  */
 export function join(value: unknown[], separator = ","): string {
   return Array.isArray(value) ? value.join(separator) : "";
