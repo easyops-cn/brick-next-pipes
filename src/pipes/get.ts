@@ -1,19 +1,19 @@
 import { get as _get } from "lodash";
 
 /**
- * Gets the property value at path of object. If the resolved value is undefined the defaultValue is used
- * in its place.
+ * 获取一个对象指定属性（路径）的值。
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#get | _.get}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#get | _.get}。
  *
  * @category Object
  *
  * @public
  *
- * @param object - The object to query.
- * @param path - The path of the property to get.
- * @param defaultValue - The value returned if the resolved value is undefined.
- * @returns Returns the resolved value.
+ * @param object - 对象。
+ * @param path - 属性（路径）。
+ * @param defaultValue - 当获取的值为 `undefined` 时返回的默认值。
+ *
+ * @returns 结果。
  */
 export function get(
   object: Record<string, unknown>,

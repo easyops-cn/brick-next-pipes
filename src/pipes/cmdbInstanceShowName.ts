@@ -1,5 +1,5 @@
 /**
- * Get the display name of a CMDB instance from its properties.
+ * 获得一个 CMDB 实例的展示名。
  *
  * @category Others
  *
@@ -21,11 +21,11 @@
  * // Returns "Foo".
  * ```
  *
- * @param value - A property (single string or an array of string)
+ * @param value - 用于展示的（一个或多个）属性值。
  *
- * @returns The display name
+ * @returns 实例的展示名。
  */
-export function cmdbInstanceShowName(value: unknown): unknown {
+export function cmdbInstanceShowName(value: string | string[]): string {
   if (Array.isArray(value)) {
     const firstKey = value[0];
     const resKey = value.slice(1, value.length).join(",");

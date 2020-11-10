@@ -1,18 +1,11 @@
 import { get } from "lodash";
 
 /**
- * Creates a new array by populated with the specific property
- * of each items of the calling array.
+ * 通过填充调用数组中各项的指定属性来创建一个新数组。
  *
  * @category Array
  *
  * @public
- *
- * @remarks
- *
- * The parameter `key` could be a dot-separated string of property path.
- *
- * Returns an empty string if the input is not array.
  *
  * @example
  *
@@ -24,10 +17,10 @@ import { get } from "lodash";
  * // Returns ["xyz", undefined]
  * ```
  *
- * @param value - The array to be mapped
- * @param key - The property name (path) to be mapped
+ * @param value - 数组。
+ * @param key - 属性名（路径）。
  *
- * @returns The new mapped array
+ * @returns 返回新数组，当输入不是数组时返回空数组。
  */
 export function map(value: unknown[], key: string): unknown[] {
   return Array.isArray(value) ? value.map((item) => get(item, key)) : [];

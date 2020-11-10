@@ -1,15 +1,15 @@
 /**
- * Returns certain value by checking the input value is truthy or falsy.
+ * 三元运算，根据条件返回两个值中的一个。
  *
  * @category Logic
  *
  * @public
  *
- * @param value - The condition
- * @param resultIfTrue - A value which is returned if the input is truthy
- * @param resultIfFalse - A value which is returned if the input is falsy
+ * @param value - 条件。
+ * @param resultIfTrue - 当条件为真时返回的值。
+ * @param resultIfFalse - 当条件为假时返回的值。
  *
- * @returns `resultIfTrue` if `value` is truthy, otherwise `resultIfFalse`
+ * @returns 当 `value` 为真时返回 `resultIfTrue`，否则返回 `resultIfFalse`。
  */
 export function ternary<T, U>(
   value: boolean,

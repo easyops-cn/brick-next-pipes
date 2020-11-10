@@ -1,14 +1,14 @@
 /**
- * The multiplication operator (`*`) produces the product of the operands.
+ * 数学乘法。
  *
  * @category Mathematics
  *
  * @public
  *
- * @param value - The multiplicand
- * @param operand - The multiplier
+ * @param value - 被乘数。
+ * @param operand - 乘数。
  *
- * @returns The product of the operands.
+ * @returns 积。
  */
 export function multiply(value: number, operand: number): number {
   return value * operand;

@@ -1,19 +1,19 @@
 import { findIndex as _findIndex } from "lodash";
 
 /**
- * This method is like _.find except that it returns the index of the first element predicate returns truthy
- * for instead of the element itself.
+ * 从一个数组中找到第一个匹配的元素的位置。
  *
  * @category Array
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#findIndex | _.findIndex}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#findIndex | _.findIndex}。
  *
  * @public
  *
- * @param array - The array to search.
- * @param predicate - The function invoked per iteration.
- * @param fromIndex - The index to search from.
- * @returns Returns the index of the found element, else -1.
+ * @param array - 要搜索的数组。
+ * @param predicate - 需要匹配的条件。
+ * @param fromIndex - 从哪个位置开始搜索。
+ *
+ * @returns 返回找到的元素的位置，没有找到时返回 `-1`。
  */
 export function findIndex(
   array: unknown[],

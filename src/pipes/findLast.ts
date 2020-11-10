@@ -1,19 +1,19 @@
 import { findLast as _findLast } from "lodash";
 
 /**
- * This method is like _.find except that it iterates over elements of a collection from
- * right to left.
+ * 从一个数据集合中从后向前找到第一个匹配的元素。
  *
  * @category Collection
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#findLast | _.findLast}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#findLast | _.findLast}。
  *
  * @public
  *
- * @param collection - Searches for a value in this list.
- * @param predicate - The function called per iteration.
- * @param fromIndex - The index to search from.
- * @returns The found element, else undefined.
+ * @param collection - 要搜索的集合。
+ * @param predicate - 需要匹配的条件。
+ * @param fromIndex - 从哪个位置开始搜索。
+ *
+ * @returns 返回找到的元素，没有找到时返回 `undefined`。
  */
 export function findLast(
   collection: unknown[] | Record<string, unknown>,

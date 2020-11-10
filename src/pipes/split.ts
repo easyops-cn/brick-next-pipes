@@ -1,5 +1,5 @@
 /**
- * Divides a string into an ordered list of substrings.
+ * 将一个字符串分割为字符串列表。
  *
  * @category String
  *
@@ -7,13 +7,12 @@
  *
  * @remarks
  *
- * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split}
- * Returns `[]` if the input is not a string.
+ * 详见 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split}。
  *
- * @param value - The input string
- * @param separator - The separator
+ * @param value - 字符串。
+ * @param separator - 分隔符。
  *
- * @returns The array of substrings
+ * @returns 返回字符串子串数组，如果输入不是字符串则返回空数组。
  */
 export function split(value: string, separator: string): string[] {
   return typeof value === "string" ? value.split(separator) : [];

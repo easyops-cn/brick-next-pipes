@@ -1,17 +1,16 @@
 import { sortBy } from "lodash";
 
 /**
- * Returns a copy of an array, sorted in ascending order
- * by the specific property of each elements of the array.
+ * 返回一个数组按指定属性排序后的新数组。
  *
  * @category Array
  *
  * @public
  *
- * @param value - The input array
- * @param fields - The property path to sort by
+ * @param value - 数组。
+ * @param fields - 属性（路径）。
  *
- * @returns The sorted array
+ * @returns 排序后的新数组。
  */
 export function sort<T>(value: T[], fields?: string | string[]): T[] {
   return Array.isArray(value) ? sortBy(value, fields) : [];

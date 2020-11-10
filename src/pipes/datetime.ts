@@ -1,7 +1,7 @@
 import moment from "moment";
 
 /**
- * Format a datetime (using locale timezone).
+ * 日期时间格式化（使用当地时区）。
  *
  * @category Datetime
  *
@@ -17,10 +17,10 @@ import moment from "moment";
  * // Returns "2020-02-28"
  * ```
  *
- * @param value - A valid moment input
- * @param format - A valid moment format
+ * @param value - 日期时间字符串或 Unix 时间戳（{@link https://momentjs.com/docs/#/parsing/string/}）。
+ * @param format - 输出格式。
  *
- * @returns The formatted string
+ * @returns 格式化后的日期时间。
  */
 export function datetime(value: number | string, format: string): string {
   return moment(value).format(format);

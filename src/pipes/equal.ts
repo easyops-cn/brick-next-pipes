@@ -1,14 +1,13 @@
 import { isEqual } from "lodash";
 
 /**
- * Performs a deep comparison between two values to determine if they are
- * equivalent.
+ * 比较两个值是否相同（深度比较）。
  *
  * @category Logic
  *
  * @remarks
  *
- * It is transparently exported from {@link https://lodash.com/docs/#isEqual | _.isEqual}.
+ * 透传调用 {@link https://lodash.com/docs/#isEqual | _.isEqual}。
  *
  * **Note:** This method supports comparing arrays, array buffers, booleans,
  * date objects, error objects, maps, numbers, `Object` objects, regexes,
@@ -18,9 +17,10 @@ import { isEqual } from "lodash";
  *
  * @public
  *
- * @param value - The value to compare.
- * @param other - The other value to compare.
- * @returns Returns `true` if the values are equivalent, else `false`.
+ * @param value - 被比较的值。
+ * @param other - 比较值。
+ *
+ * @returns 如果两者相同返回 `true`，否则返回 `false`。
  *
  * @example
  *

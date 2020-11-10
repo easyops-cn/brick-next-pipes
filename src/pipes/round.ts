@@ -1,17 +1,18 @@
 import { round as _round } from "lodash";
 
 /**
- * Calculates n rounded to precision.
+ * 获取一个数值的近似值。
  *
  * @category Mathematics
  *
- * @remarks It is transparently exported from {@link https://lodash.com/docs/#round | _.round}.
+ * @remarks 透传调用 {@link https://lodash.com/docs/#round | _.round}。
  *
  * @public
  *
- * @param n - The number to round.
- * @param precision - The precision to round to.
- * @returns Returns the rounded number.
+ * @param n - 数值。
+ * @param precision - 精度。
+ *
+ * @returns 近似值。
  */
 export function round(n: number, precision?: number): number {
   return _round(n, precision);

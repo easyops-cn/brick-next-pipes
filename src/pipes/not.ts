@@ -1,13 +1,13 @@
 /**
- * The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa.
+ * 布尔取反。
  *
  * @category Logic
  *
  * @public
  *
- * @param value - The input value
+ * @param value - 输入值
  *
- * @returns `false` if the input can be converted to `true`, otherwise `true`
+ * @returns 取反后的布尔值。
  */
 export function not(value: unknown): boolean {
   return !value;

@@ -1,7 +1,7 @@
 import moment, { DurationInputArg2 } from "moment";
 
 /**
- * Parse a time range.
+ * 解析一个时间字符串。
  *
  * @category Datetime
  *
@@ -9,15 +9,15 @@ import moment, { DurationInputArg2 } from "moment";
  *
  * @remarks
  *
- * `now/d` is parsed to the timestamp of the beginning of the current day.
+ * `now/d` 将被转换为当天开始时的时间戳。
  *
- * `now/y` is parsed to the timestamp of the beginning of the current year.
+ * `now/y` 将被转换为当年开始时的时间戳。
  *
- * `now-{n}d` where `{n}` is a digit number, is parsed to the timestamp of the day `n` days ago.
+ * `now-{n}d` 将被转换为 `n` 天前的时间戳。
  *
- * @param value - The input string
+ * @param value - 时间字符串。
  *
- * @returns The timestamp
+ * @returns 解析后的时间戳，如果输入为空返回当前的时间戳。
  */
 export function parseTimeRange(value: string): number {
   if (value === "now/d") {

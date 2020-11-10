@@ -1,7 +1,13 @@
 /**
- * Creates an array of key-value pairs from the entries of an object.
+ * 将一个对象根据键值对映射转换为数组。
  *
  * @category Others
+ *
+ * @remarks
+ *
+ * 该函数首先将输入的对象 `data` 拆分成键值对数组，再将每个键值对
+ * `[key, value]` 转换为 `{ [keyField]: key, [valueField]: value }`，
+ * 最后返回这个新数组。
  *
  * @public
  *
@@ -17,19 +23,19 @@
  * // ]`
  * ```
  *
- * @param value - The input object
- * @param keyField - The field name of keys
- * @param valueField - The field name of values
+ * @param data - 对象。
+ * @param keyField - 键名字段。
+ * @param valueField - 键值字段。
  *
- * @returns The new array of key-value pairs
+ * @returns 键值对映射后的数组。
  */
 export function mapToArray(
-  value: Record<string, unknown>,
+  data: Record<string, unknown>,
   keyField: string,
   valueField: string
 ): unknown[] {
-  if (typeof value !== "object" || !value) return [];
-  return Object.entries(value).map(([k, v]) => ({
+  if (typeof data !== "object" || !data) return [];
+  return Object.entries(data).map(([k, v]) => ({
     [keyField]: k,
     [valueField]: v,
   }));
