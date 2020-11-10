@@ -38,6 +38,7 @@ const rawPipes = apiJson.members[0].members.filter(
 interface PipeItem {
   name: string;
   category: string;
+  description: string;
 }
 
 const pipes: PipeItem[] = [];
@@ -63,6 +64,7 @@ for (const member of entry.members) {
     pipes.push({
       name: member.displayName,
       category,
+      description: getPlainTextOfContainer(doc.summarySection).trim(),
     });
   }
 }
@@ -73,17 +75,21 @@ fs.writeFileSync(
 );
 
 function getPlainTextOfContainer(docSection: tsdoc.DocNodeContainer): string {
-  return docSection.nodes.map((node) => getPlainText(node)).join(" ");
+  return docSection.nodes.map((node) => getPlainText(node)).join("");
 }
 
 function getPlainText(docNode: tsdoc.DocNode): string {
-  // console.log("kind", docNode.kind);
   switch (docNode.kind) {
     case tsdoc.DocNodeKind.PlainText:
       return (docNode as tsdoc.DocPlainText).text;
     case tsdoc.DocNodeKind.Paragraph:
       return getPlainTextOfContainer(docNode as tsdoc.DocParagraph);
+    case tsdoc.DocNodeKind.CodeSpan:
+      return `\`${(docNode as tsdoc.DocCodeSpan).code}\``;
+    case tsdoc.DocNodeKind.LinkTag:
+      return (docNode as tsdoc.DocLinkTag).linkText;
     default:
+      // console.log("kind", docNode.kind);
       return "";
   }
 }

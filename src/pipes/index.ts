@@ -1,5 +1,5 @@
 /**
- * 用于 Brick Next 的 Pipes 管道列表。
+ * 用于 Brick Next 的 Pipes 管道列表。源代码托管在 GitHub {@link https://github.com/easyops-cn/brick-next-pipes | easyops-cn/brick-next-pipes}。
  *
  * @remarks
  *
