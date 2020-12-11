@@ -3,7 +3,7 @@ import { keyBy, merge } from "lodash";
 /**
  * 将两个对象数组根据键合并为一个数组。
  *
- * @category Others
+ * @category Array
  *
  * @public
  *
@@ -12,7 +12,7 @@ import { keyBy, merge } from "lodash";
  * ```ts
  * const arr1 = [{id:1,a:"sai"},{id:2,a: "King"}];
  * const arr2 = [{id:1,b:23},{id:3,b:24}];
- * mergeArrayByKey(data, "label", "value")
+ * mergeArrayByKey("id", arr1, arr2)
  * // Returns  `[
  * //     {id:1,a:"sai",b:23},
  * //     {id:2,a:"King"},
