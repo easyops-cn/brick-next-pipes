@@ -7,20 +7,47 @@ describe("mergeArrayByKey", () => {
   ][] = [
     [
       [
+        [
+          [
+            { id: 1, a: "sai" },
+            { id: 2, a: "King" },
+          ],
+          [
+            { id: 1, b: 23 },
+            { id: 3, b: 24 },
+          ],
+        ],
         "id",
-        [
-          { id: 1, a: "sai" },
-          { id: 2, a: "King" },
-        ],
-        [
-          { id: 1, b: 23 },
-          { id: 3, b: 24 },
-        ],
       ],
       [
         { id: 1, a: "sai", b: 23 },
         { id: 2, a: "King" },
         { id: 3, b: 24 },
+      ],
+    ],
+    [
+      [
+        [
+          [
+            { id: 1, a: "sai" },
+            { id: 2, a: "King" },
+          ],
+          [
+            { id: 1, b: 23 },
+            { id: 3, b: 24 },
+          ],
+          [
+            { id: 1, c: "haha" },
+            { id: 4, c: "whatever" },
+          ],
+        ],
+        "id",
+      ],
+      [
+        { id: 1, a: "sai", b: 23, c: "haha" },
+        { id: 2, a: "King" },
+        { id: 3, b: 24 },
+        { id: 4, c: "whatever" },
       ],
     ],
   ];

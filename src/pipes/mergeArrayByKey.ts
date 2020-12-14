@@ -10,9 +10,8 @@ import { keyBy, merge } from "lodash";
  * @example
  *
  * ```ts
- * const arr1 = [{id:1,a:"sai"},{id:2,a: "King"}];
- * const arr2 = [{id:1,b:23},{id:3,b:24}];
- * mergeArrayByKey("id", arr1, arr2)
+ * const dataList = [[{id:1,a:"sai"},{id:2,a: "King"}], [{id:1,b:23},{id:3,b:24}]]
+ * mergeArrayByKey(dataList, "id")
  * // Returns  `[
  * //     {id:1,a:"sai",b:23},
  * //     {id:2,a:"King"},
@@ -22,14 +21,11 @@ import { keyBy, merge } from "lodash";
  *
  *
  * @returns 根据 key 合并后的数组。
+ * @param dataList
  * @param key
- * @param arr1
- * @param arr2
  */
-export function mergeArrayByKey(
-  key: string,
-  arr1: unknown[],
-  arr2: unknown[]
-): unknown[] {
-  return Object.values(merge(keyBy(arr1, key), keyBy(arr2, key)));
+export function mergeArrayByKey(dataList: unknown[][], key: string): unknown[] {
+  return dataList.reduce((acc, cur) => {
+    return Object.values(merge(keyBy(acc, key), keyBy(cur, key)));
+  }, []);
 }
