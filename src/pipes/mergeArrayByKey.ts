@@ -1,7 +1,7 @@
 import { keyBy, merge } from "lodash";
 
 /**
- * 将两个对象数组根据键合并为一个数组。
+ * 将多个对象数组根据键合并为一个数组。
  *
  * @category Array
  *
