@@ -116,6 +116,9 @@ export function map(value: unknown[], key: string): unknown[];
 export function mapToArray(data: Record<string, unknown>, keyField: string, valueField: string): unknown[];
 
 // @public
+export function mergeArrayByKey(dataList: unknown[][], key: string): unknown[];
+
+// @public
 export function multiply(value: number, operand: number): number;
 
 // @public
