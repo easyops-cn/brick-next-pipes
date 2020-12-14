@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.8](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.7...v0.3.8) (2020-12-14)
+
+### Features
+
+- **pipes:** add a pipe `mergeArrayByKey` ([#16](https://github.com/easyops-cn/brick-next-pipes/issues/16)) ([54096d6](https://github.com/easyops-cn/brick-next-pipes/commit/54096d6e0c7670699dfe79886cc198c9ae950b6f))
+
 ### [0.3.7](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.6...v0.3.7) (2020-11-10)
 
 ### Bug Fixes
