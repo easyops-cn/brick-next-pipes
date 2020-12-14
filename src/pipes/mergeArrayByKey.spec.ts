@@ -50,6 +50,18 @@ describe("mergeArrayByKey", () => {
         { id: 4, c: "whatever" },
       ],
     ],
+    [
+      [
+        [
+          [{"id":1, 'data': [{ 'user': 'barney' }, { 'user': 'fred' }] }],
+          [{"id":1, 'data': [{ 'age': 36 }, { 'age': 40 }]}],
+        ],
+        "id",
+      ],
+      [
+        { id: 1, data: [{ 'user': 'barney' }, { 'user': 'fred' }, { 'age': 36 }, { 'age': 40 }] },
+      ],
+    ],
   ];
   test.each(testCases)(
     "mergeArrayByKey(...%j) should return %j",
