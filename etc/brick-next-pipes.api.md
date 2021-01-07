@@ -142,6 +142,9 @@ export interface Period {
 }
 
 // @public
+export function randomString(length?: number, characters?: string): string;
+
+// @public
 export function reverse<T>(value: T[]): T[];
 
 // @public

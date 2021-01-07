@@ -58,6 +58,7 @@ export * from "./not";
 export * from "./nullish";
 export * from "./number";
 export * from "./parseTimeRange";
+export * from "./randomString";
 export * from "./reverse";
 export * from "./slice";
 export * from "./sort";
