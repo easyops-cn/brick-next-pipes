@@ -11,5 +11,5 @@
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            release-type: node
-           package-name: brick-next-pipes
+           package-name: "@easyops-cn/brick-next-pipes"
            bump-minor-pre-major: true
