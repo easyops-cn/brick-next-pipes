@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.8...v0.3.9) (2021-01-07)
+
+### Features
+
+- **pipes:** add randomString pipe ([7437c8a](https://github.com/easyops-cn/brick-next-pipes/commit/7437c8a5faaae4327e8ceb653ffe056b77dc614a))
+
 ### [0.3.8](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.7...v0.3.8) (2020-12-14)
 
 ### Features
