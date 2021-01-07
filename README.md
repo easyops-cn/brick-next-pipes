@@ -29,7 +29,13 @@ npm start
 npm test
 ```
 
-## Publish
+## Publishing
+
+There is the [Release Please](https://github.com/apps/release-please) bot to handle publishing. Just merge the relevant release-PR, no worries.
+
+<details>
+
+Alternatively, publish manually:
 
 ```shell
 npm run release
@@ -37,3 +43,5 @@ git push --follow-tags origin master
 npm run build
 npm publish
 ```
+
+</details>
