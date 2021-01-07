@@ -31,7 +31,7 @@ npm test
 
 ## Publishing
 
-There is the [Release Please](https://github.com/apps/release-please) bot to handle publishing. Just merge the relevant release-PR, no worries.
+There is the [Release Please Action](https://github.com/google-github-actions/release-please-action) to handle publishing. Just merge the relevant release-PR, no worries.
 
 <details>
 
