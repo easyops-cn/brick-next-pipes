@@ -20,11 +20,12 @@
  * ```
  *
  * @param length - 随机字符串的长度，默认为8。
+ *
  * @param characters - 随机字符串包含哪些字符，默认为大小写字母及数字。例如指定"0123456789"则随机字符只会包含数字；指定"0123456789abcdef"则随机字符是个16进制数。
  *
  * @returns 随机字符串
  */
-export function randomString(length: number, characters: string): string {
+export function randomString(length?: number, characters?: string): string {
   length = length > 0 ? length : 8;
   characters =
     typeof characters === "string"
