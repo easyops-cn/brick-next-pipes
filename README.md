@@ -1,4 +1,4 @@
-# Brick Next Pipes [![CI Status](https://github.com/easyops-cn/docusaurus-search-local/workflows/CI/badge.svg?event=push)](https://github.com/easyops-cn/brick-next-pipes/actions?query=workflow%3ACI) [![Coverage Status](https://coveralls.io/repos/github/easyops-cn/brick-next-pipes/badge.svg)](https://coveralls.io/github/easyops-cn/brick-next-pipes)
+# Brick Next Pipes [![CI Status](https://github.com/easyops-cn/brick-next-pipes/workflows/CI/badge.svg?event=push)](https://github.com/easyops-cn/brick-next-pipes/actions?query=workflow%3ACI) [![Coverage Status](https://coveralls.io/repos/github/easyops-cn/brick-next-pipes/badge.svg)](https://coveralls.io/github/easyops-cn/brick-next-pipes)
 
 ## Usage
 
