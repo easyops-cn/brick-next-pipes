@@ -52,7 +52,7 @@
     "jest": "^26.4.0",
     "js-yaml": "^3.14.0",
     "lint-staged": "^10.2.11",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "lolex": "^6.0.0",
     "moment": "^2.27.0",
     "prettier": "^2.0.5",
@@ -62,7 +62,7 @@
   },
   "peerDependencies": {
     "js-yaml": "^3.14.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "moment": "^2.27.0"
   }
 }
