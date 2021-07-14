@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN_EVE }}
           release-type: node
           package-name: "@easyops-cn/brick-next-pipes"
           bump-minor-pre-major: true
