@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.11](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.10...v0.3.11) (2021-07-14)
+
+
+### Bug Fixes
+
+* correct example of datetime ([82e2244](https://www.github.com/easyops-cn/brick-next-pipes/commit/82e224480b2deebd8a42a7799130e36212eda047))
+
 ### [0.3.10](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.9...v0.3.10) (2021-01-07)
 
 ### Bug Fixes
