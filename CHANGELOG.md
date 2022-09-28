@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.16](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.15...v0.3.16) (2022-09-28)
+
+
+### Bug Fixes
+
+* 修改tag版本 Closes INSTANCE-2938 ([34b314d](https://www.github.com/easyops-cn/brick-next-pipes/commit/34b314d17e42c864c91baec1b1a10ac2f0c9a7ba))
+* 修改tag版本 Closes INSTANCE-2938 ([786f45f](https://www.github.com/easyops-cn/brick-next-pipes/commit/786f45fd7c768737ca9d2d06a2600b21e2584d5d))
+* 修改tag版本 Closes INSTANCE-2938 ([fe0a78e](https://www.github.com/easyops-cn/brick-next-pipes/commit/fe0a78e7c725156170f2dfca519549fa7439694b))
+
 ### [0.3.15](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.14...v0.3.15) (2022-09-28)
 
 
