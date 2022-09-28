@@ -2,19 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.3.12](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.11...v0.3.12) (2021-08-27)
-
+### [0.3.13](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.12...v0.3.13) (2022-09-28)
 
 ### Bug Fixes
 
-* unitFormat修复单位换算bug ([60d4425](https://www.github.com/easyops-cn/brick-next-pipes/commit/60d442583a16833cc65f1cc8d4642dd637d01f0d))
+- cmdbInstanceShowName 处理 undefined 情况 Closes INSTANCE-2938 ([d5a70e1](https://github.com/easyops-cn/brick-next-pipes/commit/d5a70e1fd70076af659092a42c9b15fc3597d2fa))
+
+### [0.3.12](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.11...v0.3.12) (2021-08-27)
+
+### Bug Fixes
+
+- unitFormat 修复单位换算 bug ([60d4425](https://www.github.com/easyops-cn/brick-next-pipes/commit/60d442583a16833cc65f1cc8d4642dd637d01f0d))
 
 ### [0.3.11](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.10...v0.3.11) (2021-07-14)
 
-
 ### Bug Fixes
 
-* correct example of datetime ([82e2244](https://www.github.com/easyops-cn/brick-next-pipes/commit/82e224480b2deebd8a42a7799130e36212eda047))
+- correct example of datetime ([82e2244](https://www.github.com/easyops-cn/brick-next-pipes/commit/82e224480b2deebd8a42a7799130e36212eda047))
 
 ### [0.3.10](https://github.com/easyops-cn/brick-next-pipes/compare/v0.3.9...v0.3.10) (2021-01-07)
 
