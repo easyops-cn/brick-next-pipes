@@ -27,9 +27,9 @@
  */
 export function cmdbInstanceShowName(value: string | string[]): string {
   if (Array.isArray(value)) {
-    const firstKey = value[0];
+    const firstKey = value[0] || "-"; // 第一个show key为undefined时展示-
     const resKey = value.slice(1, value.length).join(",");
-    const res = resKey ? `${firstKey}(${resKey})` : firstKey ?? "";
+    const res = resKey ? `${firstKey}(${resKey})` : firstKey;
     return res;
   } else {
     return value;
