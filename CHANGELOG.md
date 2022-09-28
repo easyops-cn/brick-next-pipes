@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.13](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.12...v0.3.13) (2022-09-28)
+
+
+### Bug Fixes
+
+* cmdbInstanceShowName处理undefined情况 Closes INSTANCE-2938 ([2a025c2](https://www.github.com/easyops-cn/brick-next-pipes/commit/2a025c2db1bc81385bd190c06628c01c18a84595))
+
 ### [0.3.12](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.11...v0.3.12) (2021-08-27)
 
 
