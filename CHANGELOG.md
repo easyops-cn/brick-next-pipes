@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.17](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.16...v0.3.17) (2022-09-28)
+
+
+### Bug Fixes
+
+* fix release-please missing id ([533a4e3](https://www.github.com/easyops-cn/brick-next-pipes/commit/533a4e36f4b664502ee55d8f5400ece4d9cce4d1))
+
 ### [0.3.16](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.15...v0.3.16) (2022-09-28)
 
 
