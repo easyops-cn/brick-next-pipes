@@ -3,6 +3,7 @@ import {
   Unit as FormatUnit,
   times,
 } from "../constants";
+import { matchUnit } from "./util";
 
 export const timeFormatUnits: FormatUnit[][] = [times];
 
@@ -21,47 +22,66 @@ export const timeFormatUnitIds = ([] as string[]).concat.apply(
 
 export function humanizeTimeValue(
   value: number,
-  unit?: TimeFormatUnitId
+  unit?: TimeFormatUnitId,
+  targetUnit?: TimeFormatUnitId
 ): [number, string] {
   let baseTimeUnitGroupIndex = 0;
   let baseTimeUnitIndex = 2;
+  let targetTimeUnitIndex = -1;
+
   if (unit) {
     for (let i = 0; i < timeFormatUnits.length; ++i) {
-      const timeUnitIndex = timeFormatUnits[i].findIndex(
-        (timeUnit) =>
-          timeUnit.id.toLocaleLowerCase() === unit.toLocaleLowerCase() ||
-          (timeUnit.alias &&
-            timeUnit.alias
-              .map((alias) => alias.toLocaleLowerCase())
-              .includes(unit))
-      );
-      // istanbul ignore else
-      if (timeUnitIndex !== -1) {
+      let _baseTimeUnitIndex = -1;
+      let _targetTimeUnitIndex = -1;
+
+      timeFormatUnits[i].forEach((timeUnit, index) => {
+        if (matchUnit(timeUnit, unit)) _baseTimeUnitIndex = index;
+        if (matchUnit(timeUnit, targetUnit)) _targetTimeUnitIndex = index;
+      });
+
+      if (_baseTimeUnitIndex !== -1) {
         baseTimeUnitGroupIndex = i;
-        baseTimeUnitIndex = timeUnitIndex;
+        baseTimeUnitIndex = _baseTimeUnitIndex;
+        targetTimeUnitIndex = _targetTimeUnitIndex;
         break;
       }
     }
+  } else if (targetUnit) {
+    targetTimeUnitIndex = timeFormatUnits[baseTimeUnitGroupIndex].findIndex(
+      (timeUnit) => matchUnit(timeUnit, targetUnit)
+    );
   }
+
   const timeFormatUnitGroup = timeFormatUnits[baseTimeUnitGroupIndex];
 
-  let timeFormatUnit = timeFormatUnitGroup[baseTimeUnitIndex];
-  for (let i = baseTimeUnitIndex + 1; i < timeFormatUnitGroup.length; ++i) {
-    if (
-      value /
-        (timeFormatUnitGroup[i].divisor /
-          timeFormatUnitGroup[baseTimeUnitIndex].divisor) >=
-      1
-    ) {
-      timeFormatUnit = timeFormatUnitGroup[i];
-    } else {
-      break;
+  const baseTimeFormatUnit = timeFormatUnitGroup[baseTimeUnitIndex];
+  let targetTimeFormatUnit = baseTimeFormatUnit;
+
+  if (targetTimeUnitIndex === -1) {
+    for (let i = baseTimeUnitIndex + 1; i < timeFormatUnitGroup.length; ++i) {
+      if (
+        value / (timeFormatUnitGroup[i].divisor / baseTimeFormatUnit.divisor) >=
+        1
+      ) {
+        targetTimeFormatUnit = timeFormatUnitGroup[i];
+      } else {
+        break;
+      }
     }
+  } else {
+    targetTimeFormatUnit = timeFormatUnitGroup[targetTimeUnitIndex];
+  }
+
+  if (targetUnit && targetTimeUnitIndex === -1) {
+    console.warn(
+      `Cannot convert unit "${
+        unit || baseTimeFormatUnit.display
+      }" to "${targetUnit}"`
+    );
   }
 
   return [
-    value /
-      (timeFormatUnit.divisor / timeFormatUnitGroup[baseTimeUnitIndex].divisor),
-    timeFormatUnit.display,
+    value / (targetTimeFormatUnit.divisor / baseTimeFormatUnit.divisor),
+    targetTimeFormatUnit.display,
   ];
 }

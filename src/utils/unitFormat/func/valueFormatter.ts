@@ -17,6 +17,7 @@ export interface Format {
   type?: FormatType;
   precision?: number;
   unit?: string;
+  targetUnit?: string;
 }
 
 export enum FormatType {
@@ -79,7 +80,8 @@ export const formatValue = (
       case FormatType.Time: {
         const [timeValue, timeUnitDisplay] = humanizeTimeValue(
           value,
-          format.unit as TimesUnitId
+          format.unit as TimesUnitId,
+          format.targetUnit as TimesUnitId
         );
         return [
           `${convertValueByPrecision(
@@ -92,7 +94,8 @@ export const formatValue = (
       case FormatType.Data: {
         const [dataValue, dataUnitDisplay] = humanizeDataValue(
           value,
-          format.unit as BytesUnitId
+          format.unit as BytesUnitId,
+          format.targetUnit as BytesUnitId
         );
         return [
           `${convertValueByPrecision(dataValue, precision)}`,
@@ -102,7 +105,8 @@ export const formatValue = (
       case FormatType.DataRate: {
         const [dataRateValue, dataRateUnitDisplay] = humanizeDataRateValue(
           value,
-          format.unit as ByteRatesUnitId
+          format.unit as ByteRatesUnitId,
+          format.targetUnit as ByteRatesUnitId
         );
         return [
           `${convertValueByPrecision(dataRateValue, precision)}`,

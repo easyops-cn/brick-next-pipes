@@ -17,4 +17,38 @@ describe("dateRate", () => {
       "MBps",
     ]);
   });
+
+  it("should humanize data rate value correctly with targetUnit", () => {
+    expect(
+      humanizeDataRateValue(
+        8,
+        "kilobits/sec" as DataRateFormatUnitId,
+        "bits/sec(bps)" as DataRateFormatUnitId
+      )
+    ).toEqual([8 * 1024, "bps"]);
+
+    expect(
+      humanizeDataRateValue(
+        8,
+        "kilobits/sec" as DataRateFormatUnitId,
+        "mbps" as DataRateFormatUnitId
+      )
+    ).toEqual([8 / 1024, "Mbps"]);
+
+    expect(
+      humanizeDataRateValue(
+        8,
+        "kilobytes/sec" as DataRateFormatUnitId,
+        "bytes/sec" as DataRateFormatUnitId
+      )
+    ).toEqual([8 * 1024, "Bps"]);
+
+    expect(
+      humanizeDataRateValue(
+        8,
+        "kilobytes/sec" as DataRateFormatUnitId,
+        "megabytes/sec" as DataRateFormatUnitId
+      )
+    ).toEqual([8 / 1024, "MBps"]);
+  });
 });

@@ -60,6 +60,13 @@ describe("valueFormatter", () => {
 
     expect(
       formatValue(1000, {
+        unit: "megabytes(MB)",
+        targetUnit: "kilobytes(KB)",
+      })
+    ).toEqual(["1000000.00", "KB"]);
+
+    expect(
+      formatValue(1000, {
         unit: "gigabytes(GB)",
       })
     ).toEqual(["1.00", "TB"]);
@@ -99,6 +106,13 @@ describe("valueFormatter", () => {
         unit: "mebibytes(MiB)",
       })
     ).toEqual(["1.00", "GiB"]);
+
+    expect(
+      formatValue(1, {
+        unit: "mebibytes(MiB)",
+        targetUnit: "kibibytes(KiB)",
+      })
+    ).toEqual(["1024.00", "KiB"]);
 
     expect(
       formatValue(1024, {
@@ -144,5 +158,12 @@ describe("valueFormatter", () => {
         unit: "KBps",
       })
     ).toEqual(["-1.00", "MBps"]);
+
+    expect(
+      formatValue(-1024 * 1024, {
+        unit: "kilobytes/sec",
+        targetUnit: "megabytes/sec",
+      })
+    ).toEqual(["-1024.00", "MBps"]);
   });
 });

@@ -15,15 +15,17 @@ import { formatUnitValue } from "../utils";
  * ```
  *
  * @param value - 数值。
- * @param unit - 单位。
+ * @param unit - 当前单位。
  * @param precision - 精度（默认为 `2`）。
+ * @param targetUnit - 目标单位，若不填则会自动计算。
  *
  * @returns 由转换后的数值和单位组成的数组。
  */
 export function unitFormat(
   value: number,
   unit: string,
-  precision = 2
+  precision = 2,
+  targetUnit?: string
 ): [string, string] {
-  return formatUnitValue(value, { unit, precision });
+  return formatUnitValue(value, { unit, precision, targetUnit });
 }
