@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.17...v0.4.0) (2022-11-15)
+
+
+### Features
+
+* unitFormat support targetUnit ([db462bc](https://www.github.com/easyops-cn/brick-next-pipes/commit/db462bc11d29536b47ce81aff85ecbbe542b6ca5))
+
 ### [0.3.17](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.16...v0.3.17) (2022-09-28)
 
 
