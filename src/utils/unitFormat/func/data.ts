@@ -5,6 +5,7 @@ import {
   bibytes,
   deprecatedBytes,
 } from "../constants";
+import { matchDataUnit } from "./util";
 
 export const dataFormatUnits: FormatUnit[][] = [
   bytes,
@@ -28,51 +29,72 @@ export const dataFormatUnitIds = ([] as string[]).concat.apply(
 
 export function humanizeDataValue(
   value: number,
-  unit?: DataFormatUnitId
+  unit?: DataFormatUnitId,
+  targetUnit?: DataFormatUnitId
 ): [number, string] {
   let baseDataUnitGroupIndex = dataFormatUnits.length - 1;
   let baseDataUnitIndex = 0;
+  let targetDataUnitIndex = -1;
+
   const sign = Math.sign(value);
   const positiveValue = Math.abs(value);
 
   if (unit) {
     for (let i = 0; i < dataFormatUnits.length; ++i) {
-      const dataUnitIndex = dataFormatUnits[i].findIndex(
-        (dataUnit) =>
-          dataUnit.id.toLocaleLowerCase() === unit.toLocaleLowerCase() ||
-          (dataUnit.alias &&
-            dataUnit.alias
-              //  .map((alias) => alias.toLocaleLowerCase())
-              .includes(unit))
-      );
-      if (dataUnitIndex !== -1) {
+      let _baseDataUnitIndex = -1;
+      let _targetDataUnitIndex = -1;
+
+      dataFormatUnits[i].forEach((dataUnit, index) => {
+        if (matchDataUnit(dataUnit, unit)) _baseDataUnitIndex = index;
+        if (matchDataUnit(dataUnit, targetUnit)) _targetDataUnitIndex = index;
+      });
+
+      if (_baseDataUnitIndex !== -1) {
         baseDataUnitGroupIndex = i;
-        baseDataUnitIndex = dataUnitIndex;
+        baseDataUnitIndex = _baseDataUnitIndex;
+        targetDataUnitIndex = _targetDataUnitIndex;
         break;
       }
     }
+  } else if (targetUnit) {
+    targetDataUnitIndex = dataFormatUnits[baseDataUnitGroupIndex].findIndex(
+      (dataUnit) => matchDataUnit(dataUnit, targetUnit)
+    );
   }
+
   const dataFormatUnitGroup = dataFormatUnits[baseDataUnitGroupIndex];
 
-  let dataFormatUnit = dataFormatUnitGroup[baseDataUnitIndex];
-  for (let i = baseDataUnitIndex + 1; i < dataFormatUnitGroup.length; ++i) {
-    if (
-      positiveValue /
-        (dataFormatUnitGroup[i].divisor /
-          dataFormatUnitGroup[baseDataUnitIndex].divisor) >=
-      1
-    ) {
-      dataFormatUnit = dataFormatUnitGroup[i];
-    } else {
-      break;
+  const baseDataFormatUnit = dataFormatUnitGroup[baseDataUnitIndex];
+  let targetDataFormatUnit = baseDataFormatUnit;
+
+  if (targetDataUnitIndex === -1) {
+    for (let i = baseDataUnitIndex + 1; i < dataFormatUnitGroup.length; ++i) {
+      if (
+        positiveValue /
+          (dataFormatUnitGroup[i].divisor / baseDataFormatUnit.divisor) >=
+        1
+      ) {
+        targetDataFormatUnit = dataFormatUnitGroup[i];
+      } else {
+        break;
+      }
     }
+  } else {
+    targetDataFormatUnit = dataFormatUnitGroup[targetDataUnitIndex];
+  }
+
+  if (targetUnit && targetDataUnitIndex === -1) {
+    console.warn(
+      `Cannot convert unit "${
+        unit || baseDataFormatUnit.display
+      }" to "${targetUnit}"`
+    );
   }
 
   return [
     (positiveValue /
-      (dataFormatUnit.divisor /
-        dataFormatUnitGroup[baseDataUnitIndex].divisor)) *
+      (targetDataFormatUnit.divisor / baseDataFormatUnit.divisor)) *
       sign,
-    dataFormatUnit.display,
+    targetDataFormatUnit.display,
   ];
 }

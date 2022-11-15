@@ -143,4 +143,47 @@ describe("data", () => {
       "PiB",
     ]);
   });
+
+  it("should humanize data value correctly with targetUnit", () => {
+    expect(
+      humanizeDataValue(
+        8,
+        "megabytes" as DataFormatUnitId,
+        "bytes" as DataFormatUnitId
+      )
+    ).toEqual([8 * 1000 ** 2, "B"]);
+
+    expect(
+      humanizeDataValue(
+        8,
+        "megabytes" as DataFormatUnitId,
+        "TB" as DataFormatUnitId
+      )
+    ).toEqual([8 * 1000 ** -2, "TB"]);
+
+    expect(
+      humanizeDataValue(
+        -8,
+        "gibibytes" as DataFormatUnitId,
+        "kibibytes(KiB)" as DataFormatUnitId
+      )
+    ).toEqual([-8 * 1024 ** 2, "KiB"]);
+
+    expect(
+      humanizeDataValue(
+        -8,
+        "gibibytes" as DataFormatUnitId,
+        "TiB" as DataFormatUnitId
+      )
+    ).toEqual([-8 * 1024 ** -1, "TiB"]);
+
+    // targetUnit cannot work when unit and targetUnit are not in the same group
+    expect(
+      humanizeDataValue(
+        1,
+        "megabytes" as DataFormatUnitId,
+        "TiB" as DataFormatUnitId
+      )
+    ).toEqual([1, "MB"]);
+  });
 });
