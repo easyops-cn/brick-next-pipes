@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.4.0...v0.5.0) (2023-11-17)
+
+
+### Features
+
+* set build target to es5 ([aa7419d](https://www.github.com/easyops-cn/brick-next-pipes/commit/aa7419da928879c128152f1d29f690b1fd601cbc))
+
 ## [0.4.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.3.17...v0.4.0) (2022-11-15)
 
 
