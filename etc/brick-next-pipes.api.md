@@ -184,6 +184,8 @@ export function unitFormat(value: number, unit: string, precision?: number, targ
 export function yaml(value: string): unknown;
 
 // @public
-export function yamlStringify(value: unknown, indent?: number): string;
+export function yamlStringify(value: unknown, indent?: number, opts?: {
+    sortKeys?: boolean;
+}): string;
 
 ```

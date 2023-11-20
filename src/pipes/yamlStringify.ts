@@ -9,10 +9,15 @@ import { safeDump, JSON_SCHEMA } from "js-yaml";
  *
  * @param value - 输入值。
  * @param indent - 空格缩进数量（默认为 `2`）。
+ * @param opts - 选项
  *
  * @returns 序列化后的字符串；如果序列化失败（例如包含循环引用）返回 `undefined`。
  */
-export function yamlStringify(value: unknown, indent = 2): string {
+export function yamlStringify(
+  value: unknown,
+  indent = 2,
+  opts?: { sortKeys?: boolean }
+): string {
   let result;
   try {
     result = safeDump(value, {
@@ -21,6 +26,7 @@ export function yamlStringify(value: unknown, indent = 2): string {
       skipInvalid: true,
       noRefs: true,
       noCompatMode: true,
+      sortKeys: opts?.sortKeys,
     });
   } catch (e) {
     // eslint-disable-next-line no-console
