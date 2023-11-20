@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.5.0...v0.6.0) (2023-11-20)
+
+
+### Features
+
+* yamlStringify support sortKeys ([5dda926](https://www.github.com/easyops-cn/brick-next-pipes/commit/5dda9265224e1ee607b3bcbfb6cc581a5d7e1c4b))
+
 ## [0.5.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.4.0...v0.5.0) (2023-11-17)
 
 
