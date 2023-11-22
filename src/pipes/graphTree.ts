@@ -42,15 +42,22 @@ export interface GraphVertex {
 }
 
 /**
+ * Sort.
+ *
+ * @public
+ */
+export interface Sort {
+  key: string;
+  order: 1 | -1;
+}
+
+/**
  * A graph query.
  *
  * @public
  */
 export interface GraphQuery {
-  sort?: {
-    key: string;
-    order: 1 | -1;
-  };
+  sort?: Sort | Sort[];
 }
 
 /**
@@ -114,7 +121,7 @@ export function graphTree(value: GraphData, query?: GraphQuery): GraphVertex[] {
   if (!value) {
     return [];
   }
-  const sort = query?.sort;
+  const sort = [].concat(query?.sort || []);
   const groupByEdgeOut = groupBy(value.edges, "out");
   const findChildren = (node: GraphVertex): GraphVertex => {
     const relationEdges = groupByEdgeOut[node.instanceId];
@@ -130,14 +137,14 @@ export function graphTree(value: GraphData, query?: GraphQuery): GraphVertex[] {
         }
       }
     });
-    if (sort) {
+    if (sort.length) {
       const keyList = uniq(map(relationEdges, "out_name"));
       forEach(keyList, (key) => {
         if (!isEmpty(node[key])) {
           node[key] = orderBy(
             node[key],
-            (item) => get(item, sort.key) ?? -Infinity,
-            sort.order === -1 ? "desc" : "asc"
+            sort.map((s) => (item) => get(item, s.key) ?? -Infinity),
+            sort.map((s) => (s.order === -1 ? "desc" : "asc"))
           );
         }
       });

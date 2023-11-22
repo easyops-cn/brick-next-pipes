@@ -71,10 +71,7 @@ export interface GraphEdge {
 // @public
 export interface GraphQuery {
     // (undocumented)
-    sort?: {
-        key: string;
-        order: 1 | -1;
-    };
+    sort?: Sort | Sort[];
 }
 
 // @public
@@ -152,6 +149,14 @@ export function round(n: number, precision?: number): number;
 
 // @public
 export function slice<T>(value: T[], start: number, end?: number): T[];
+
+// @public
+export interface Sort {
+    // (undocumented)
+    key: string;
+    // (undocumented)
+    order: 1 | -1;
+}
 
 // @public
 export function sort<T>(value: T[], fields?: string | string[]): T[];
