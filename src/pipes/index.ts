@@ -73,3 +73,5 @@ export * from "./unitFormat";
 export * from "./yaml";
 export * from "./yamlStringify";
 export * from "./round";
+export * from "./atobUnicode";
+export * from "./btoaUnicode";

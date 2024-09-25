@@ -7,6 +7,9 @@
 // @public
 export function add(value: number | string, operand: number | string): number | string;
 
+// @public
+export function atobUnicode(value: string): string;
+
 // Warning: (ae-internal-missing-underscore) The name "bool" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal (undocumented)
@@ -14,6 +17,9 @@ export const bool: typeof boolean;
 
 // @public
 export function boolean(value: unknown): boolean;
+
+// @public
+export function btoaUnicode(value: string): string;
 
 // @public
 export function cmdbInstanceShowName(value: string | string[]): string;
