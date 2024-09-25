@@ -1,3 +1,4 @@
+import { TextEncoder } from "util";
 /**
  * 支持将中文进行base64编码
  *
@@ -9,7 +10,6 @@
  *
  * @returns 编码后的值
  */
-import { TextEncoder } from "util";
 
 export function btoaUnicode(value: string): string {
   const encoder = new TextEncoder();
@@ -17,6 +17,4 @@ export function btoaUnicode(value: string): string {
   let binary = "";
   bytes.forEach((byte: any) => (binary += String.fromCharCode(byte)));
   return window.btoa(binary);
-
-  // return window.btoa(unescape(encodeURIComponent(value)));
 }
