@@ -2,7 +2,7 @@ import { TextEncoder } from "util";
 /**
  * 支持将中文进行base64编码
  *
- * @category Type conversion
+ * @category Logic
  *
  * @public
  *
@@ -10,7 +10,6 @@ import { TextEncoder } from "util";
  *
  * @returns 编码后的值
  */
-
 export function btoaUnicode(value: string): string {
   const encoder = new TextEncoder();
   const bytes = encoder.encode(value);

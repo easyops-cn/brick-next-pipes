@@ -2,7 +2,7 @@ import { TextDecoder } from "util";
 /**
  * 支持base64字符解码为中文
  *
- * @category Type conversion
+ * @category Logic
  *
  * @public
  *
@@ -10,7 +10,6 @@ import { TextDecoder } from "util";
  *
  * @returns 解码后的值
  */
-
 export function atobUnicode(value: string): string {
   const binary = window.atob(value);
   const bytes = new Uint8Array(binary.length);
