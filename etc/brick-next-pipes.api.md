@@ -188,4 +188,10 @@ export function yamlStringify(value: unknown, indent?: number, opts?: {
     sortKeys?: boolean;
 }): string;
 
+// @public
+export function atobUnicode(string): string;
+
+// @public
+export function btoaUnicode(string): string;
+
 ```
