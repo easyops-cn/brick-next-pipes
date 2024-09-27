@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.7.0...v0.7.1) (2024-09-27)
+
+
+### Bug Fixes
+
+* 修改base64与中文之间的转换 ([16a92a5](https://www.github.com/easyops-cn/brick-next-pipes/commit/16a92a5bbb068e446bd701373851eb5870572123))
+
 ## [0.7.0](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.6.0...v0.7.0) (2024-09-25)
 
 
