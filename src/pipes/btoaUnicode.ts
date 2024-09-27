@@ -11,9 +11,9 @@ import { TextEncoder } from "util";
  * @returns 编码后的值
  */
 export function btoaUnicode(value: string): string {
-  const encoder = new TextEncoder();
-  const bytes = encoder.encode(value);
-  let binary = "";
-  bytes.forEach((byte: any) => (binary += String.fromCharCode(byte)));
-  return window.btoa(binary);
+  return btoa(
+    encodeURIComponent(value).replace(/%([0-9A-F]{2})/g, (match, p1) => {
+      return String.fromCharCode(Number("0x" + p1));
+    })
+  );
 }

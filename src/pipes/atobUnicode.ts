@@ -1,4 +1,3 @@
-import { TextDecoder } from "util";
 /**
  * 支持base64字符解码为中文
  *
@@ -11,11 +10,10 @@ import { TextDecoder } from "util";
  * @returns 解码后的值
  */
 export function atobUnicode(value: string): string {
-  const binary = window.atob(value);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) {
-    bytes[i] = binary.charCodeAt(i);
-  }
-  const decoder = new TextDecoder();
-  return decoder.decode(bytes);
+  return decodeURIComponent(
+    atob(value)
+      .split("")
+      .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+      .join("")
+  );
 }
