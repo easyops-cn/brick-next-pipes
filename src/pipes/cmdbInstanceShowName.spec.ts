@@ -10,7 +10,7 @@ describe("cmdbInstanceShowName", () => {
     [123 as any, 123 as any],
     [undefined, undefined],
     [[undefined, undefined], "-"],
-    [[undefined, 123], "-(123)"],
+    [[undefined, 123], "123"],
     [[123, undefined], 123],
     [[undefined], "-"],
   ];
