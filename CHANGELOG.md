@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.3](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.7.2...v0.7.3) (2025-07-22)
+
+
+### Bug Fixes
+
+* **yamlStringify:** pass through options to safeDump ([bfe8903](https://www.github.com/easyops-cn/brick-next-pipes/commit/bfe89032213b819d0b1ec003b1c66d6cf953d262))
+
 ### [0.7.2](https://www.github.com/easyops-cn/brick-next-pipes/compare/v0.7.1...v0.7.2) (2025-03-21)
 
 
