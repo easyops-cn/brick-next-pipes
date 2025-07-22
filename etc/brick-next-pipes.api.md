@@ -4,6 +4,8 @@
 
 ```ts
 
+import { DumpOptions } from 'js-yaml';
+
 // @public
 export function add(value: number | string, operand: number | string): number | string;
 
@@ -190,8 +192,7 @@ export function unitFormat(value: number, unit: string, precision?: number, targ
 export function yaml(value: string): unknown;
 
 // @public
-export function yamlStringify(value: unknown, indent?: number, opts?: {
-    sortKeys?: boolean;
-}): string;
+export function yamlStringify(value: unknown, indent?: number, opts?: DumpOptions): string;
+
 
 ```

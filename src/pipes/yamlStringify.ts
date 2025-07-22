@@ -1,4 +1,4 @@
-import { safeDump, JSON_SCHEMA } from "js-yaml";
+import { safeDump, JSON_SCHEMA, DumpOptions } from "js-yaml";
 
 /**
  * 将一个值转换为 YAML 格式的字符串（序列化）。
@@ -16,7 +16,7 @@ import { safeDump, JSON_SCHEMA } from "js-yaml";
 export function yamlStringify(
   value: unknown,
   indent = 2,
-  opts?: { sortKeys?: boolean }
+  opts?: DumpOptions
 ): string {
   let result;
   try {
@@ -26,7 +26,7 @@ export function yamlStringify(
       skipInvalid: true,
       noRefs: true,
       noCompatMode: true,
-      sortKeys: opts?.sortKeys,
+      ...opts,
     });
   } catch (e) {
     // eslint-disable-next-line no-console
