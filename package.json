@@ -46,7 +46,7 @@
     "babel-jest": "^26.3.0",
     "chalk": "^4.1.0",
     "concurrently": "^6.0.0",
-    "eslint": "^7.6.0",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
     "jest": "^26.4.0",
