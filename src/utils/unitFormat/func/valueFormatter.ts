@@ -12,12 +12,19 @@ import {
   ByteRatesUnitId,
   ShortUnitId,
 } from "../constants";
+import { isBoolean } from "lodash";
 
 export interface Format {
   type?: FormatType;
   precision?: number;
   unit?: string;
   targetUnit?: string;
+  /**
+   * 是否固定小数点位数。设置为 `fixedPrecision: false` 时，`1.50` 会变成 `1.5`。
+   *
+   * @default true
+   */
+  fixedPrecision?: boolean;
 }
 
 export enum FormatType {
@@ -38,11 +45,25 @@ export const formatUnitIds: { [type: string]: string[] } = {
   [FormatType.DataRate]: dataRateFormatUnitIds,
 };
 
+/**
+ * @param value
+ * @param precision
+ * @param fixedPrecision 默认为 `true`，设置为 `false` 时，`1.50` 会变成 `1.5`。
+ * @returns
+ */
 export const convertValueByPrecision = (
   value: number,
-  precision?: number
+  precision?: number,
+  fixedPrecision?: boolean
 ): string => {
-  return precision === undefined ? value.toString() : value.toFixed(precision);
+  if (precision === undefined) {
+    return value.toString();
+  }
+  const converted = value.toFixed(precision);
+  if (fixedPrecision === false) {
+    return (+converted).toString();
+  }
+  return converted;
 };
 
 export const formatValue = (
@@ -69,13 +90,23 @@ export const formatValue = (
     }
 
     const precision = format?.precision === undefined ? 2 : format.precision;
+    const fixedPrecision = isBoolean(format?.fixedPrecision)
+      ? format?.fixedPrecision
+      : true;
     switch (type) {
       case FormatType.Percent: {
         const percentValue = humanizePercentValue(
           value,
           format.unit as PercentUnitId
         );
-        return [`${convertValueByPrecision(percentValue, precision)}%`, null];
+        return [
+          `${convertValueByPrecision(
+            percentValue,
+            precision,
+            fixedPrecision
+          )}%`,
+          null,
+        ];
       }
       case FormatType.Time: {
         const [timeValue, timeUnitDisplay] = humanizeTimeValue(
@@ -86,7 +117,8 @@ export const formatValue = (
         return [
           `${convertValueByPrecision(
             timeValue,
-            format?.precision === undefined ? 1 : format.precision
+            format?.precision === undefined ? 1 : format.precision,
+            fixedPrecision
           )}`,
           timeUnitDisplay,
         ];
@@ -98,7 +130,7 @@ export const formatValue = (
           format.targetUnit as BytesUnitId
         );
         return [
-          `${convertValueByPrecision(dataValue, precision)}`,
+          `${convertValueByPrecision(dataValue, precision, fixedPrecision)}`,
           dataUnitDisplay,
         ];
       }
@@ -109,16 +141,25 @@ export const formatValue = (
           format.targetUnit as ByteRatesUnitId
         );
         return [
-          `${convertValueByPrecision(dataRateValue, precision)}`,
+          `${convertValueByPrecision(
+            dataRateValue,
+            precision,
+            fixedPrecision
+          )}`,
           dataRateUnitDisplay,
         ];
       }
       case FormatType.None: {
-        return [convertValueByPrecision(value, precision), ""];
+        return [convertValueByPrecision(value, precision, fixedPrecision), ""];
       }
       default: {
         return [
-          humanizeNumberValue(value, format.unit as ShortUnitId, precision),
+          humanizeNumberValue(
+            value,
+            format.unit as ShortUnitId,
+            precision,
+            fixedPrecision
+          ),
           format.unit,
         ];
       }

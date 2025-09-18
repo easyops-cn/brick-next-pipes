@@ -4,15 +4,15 @@ import { ByteRatesUnitId as DataRateFormatUnitId } from "../constants";
 describe("dateRate", () => {
   it("should humanize data rate value correctly", () => {
     expect(humanizeDataRateValue(8)).toEqual([1, "Bps"]);
-    expect(humanizeDataRateValue(8 * 1024)).toEqual([1, "KBps"]);
-    expect(humanizeDataRateValue(1024, DataRateFormatUnitId.KBps)).toEqual([
+    expect(humanizeDataRateValue(8 * 1000)).toEqual([1, "KBps"]);
+    expect(humanizeDataRateValue(1000, DataRateFormatUnitId.KBps)).toEqual([
       1,
       "MBps",
     ]);
 
     expect(humanizeDataRateValue(-8)).toEqual([-1, "Bps"]);
-    expect(humanizeDataRateValue(-8 * 1024)).toEqual([-1, "KBps"]);
-    expect(humanizeDataRateValue(-1024, DataRateFormatUnitId.KBps)).toEqual([
+    expect(humanizeDataRateValue(-8 * 1000)).toEqual([-1, "KBps"]);
+    expect(humanizeDataRateValue(-1000, DataRateFormatUnitId.KBps)).toEqual([
       -1,
       "MBps",
     ]);
@@ -25,7 +25,7 @@ describe("dateRate", () => {
         "kilobits/sec" as DataRateFormatUnitId,
         "bits/sec(bps)" as DataRateFormatUnitId
       )
-    ).toEqual([8 * 1024, "bps"]);
+    ).toEqual([8 * 1000, "bps"]);
 
     expect(
       humanizeDataRateValue(
@@ -33,7 +33,7 @@ describe("dateRate", () => {
         "kilobits/sec" as DataRateFormatUnitId,
         "mbps" as DataRateFormatUnitId
       )
-    ).toEqual([8 / 1024, "Mbps"]);
+    ).toEqual([8 / 1000, "Mbps"]);
 
     expect(
       humanizeDataRateValue(
@@ -41,7 +41,7 @@ describe("dateRate", () => {
         "kilobytes/sec" as DataRateFormatUnitId,
         "bytes/sec" as DataRateFormatUnitId
       )
-    ).toEqual([8 * 1024, "Bps"]);
+    ).toEqual([8 * 1000, "Bps"]);
 
     expect(
       humanizeDataRateValue(
@@ -49,6 +49,6 @@ describe("dateRate", () => {
         "kilobytes/sec" as DataRateFormatUnitId,
         "megabytes/sec" as DataRateFormatUnitId
       )
-    ).toEqual([8 / 1024, "MBps"]);
+    ).toEqual([8 / 1000, "MBps"]);
   });
 });

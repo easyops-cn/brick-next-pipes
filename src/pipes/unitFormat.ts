@@ -25,7 +25,13 @@ export function unitFormat(
   value: number,
   unit: string,
   precision = 2,
-  targetUnit?: string
+  targetUnit?: string,
+  fixedPrecision?: boolean
 ): [string, string] {
-  return formatUnitValue(value, { unit, precision, targetUnit });
+  return formatUnitValue(value, {
+    unit,
+    precision,
+    targetUnit,
+    fixedPrecision,
+  });
 }
