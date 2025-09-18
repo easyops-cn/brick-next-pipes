@@ -33,7 +33,7 @@ npm test
 
 There is the [Release Please Action](https://github.com/google-github-actions/release-please-action) to handle publishing. Just merge the relevant release-PR, no worries.
 
-Tips: Use `feat: ...` or `fix: ...` as commit messages to match the rules of the Release Please Action.
+IMPORTANT: Use `feat: ...` or `fix: ...` as commit messages to match the rules of the Release Please Action.
 
 <details>
 
