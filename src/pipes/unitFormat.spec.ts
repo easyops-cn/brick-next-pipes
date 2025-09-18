@@ -18,8 +18,8 @@ describe("unitFormat", () => {
       ["1000000", "bps"],
     ],
     [
-      [1200000, "kilobits/sec", 2, undefined, false],
-      ["1.2", "Gbps"],
+      [1230000, "kilobits/sec", 2, undefined, false],
+      ["1.23", "Gbps"],
     ],
   ];
   test.each(testCases)(
