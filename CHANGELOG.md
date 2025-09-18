@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/easyops-cn/brick-next-pipes/compare/v0.7.3...v0.8.0) (2025-09-18)
+
+
+### Features
+
+* bump version only ([d1fe82f](https://github.com/easyops-cn/brick-next-pipes/commit/d1fe82f8ff33e334f3e235fe49ea75b947ddf722))
+
+
+### Bug Fixes
+
+* bump version only ([add9e25](https://github.com/easyops-cn/brick-next-pipes/commit/add9e2548961bbd081012eb9a8450c8c22871637))
+* release 0.7.4 ([d248248](https://github.com/easyops-cn/brick-next-pipes/commit/d248248cca6e7847ddc10445a547bf179e9eb86d))
+* release 0.7.4 ([6533312](https://github.com/easyops-cn/brick-next-pipes/commit/653331219c5d136d5ffd0d9f3945a541133526f4))
+* update release-please-action ([a2a666c](https://github.com/easyops-cn/brick-next-pipes/commit/a2a666cd383fe978abe7964e60255f0646fbf2c1))
+
 ### [0.7.5](https://github.com/easyops-cn/brick-next-pipes/compare/v0.7.3...v0.7.5) (2025-09-18)
 
 ### Features
