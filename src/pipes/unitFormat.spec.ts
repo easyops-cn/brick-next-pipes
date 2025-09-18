@@ -6,16 +6,20 @@ describe("unitFormat", () => {
     ReturnType<typeof unitFormat>
   ][] = [
     [
-      [1024.0, "KBps"],
+      [1000.0, "KBps"],
       ["1.00", "MBps"],
     ],
     [
-      [1024.0, "KBps", 3],
+      [1000.0, "KBps", 3],
       ["1.000", "MBps"],
     ],
     [
       [1, "megabits/sec", 0, "bits/sec"],
-      ["1048576", "bps"],
+      ["1000000", "bps"],
+    ],
+    [
+      [1200000, "kilobits/sec", 2, undefined, false],
+      ["1.2", "Gbps"],
     ],
   ];
   test.each(testCases)(

@@ -186,13 +186,12 @@ export function ternary<T, U>(value: boolean, resultIfTrue: T, resultIfFalse: U)
 export function uniq<T>(array: T[]): T[];
 
 // @public
-export function unitFormat(value: number, unit: string, precision?: number, targetUnit?: string): [string, string];
+export function unitFormat(value: number, unit: string, precision?: number, targetUnit?: string, fixedPrecision?: boolean): [string, string];
 
 // @public
 export function yaml(value: string): unknown;
 
 // @public
 export function yamlStringify(value: unknown, indent?: number, opts?: DumpOptions): string;
-
 
 ```
