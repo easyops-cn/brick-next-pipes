@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.6](https://github.com/easyops-cn/brick-next-pipes/compare/v0.7.5...v0.7.6) (2025-09-18)
+
+### Bug Fixes
+
+- fix release please action ([a15626e](https://github.com/easyops-cn/brick-next-pipes/commit/a15626edb8d99f1634b6e957dd19ec6e4be8fc87))
+
 ### [0.7.5](https://github.com/easyops-cn/brick-next-pipes/compare/v0.7.3...v0.7.5) (2025-09-18)
 
 ### Features
