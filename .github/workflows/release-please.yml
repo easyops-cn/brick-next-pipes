@@ -12,7 +12,6 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN_EVE }}
           release-type: node
-          package-name: "@easyops-cn/brick-next-pipes"
           bump-minor-pre-major: true
 
       # The logic below handles the npm publication:
