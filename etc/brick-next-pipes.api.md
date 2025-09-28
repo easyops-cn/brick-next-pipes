@@ -30,6 +30,9 @@ export function cmdbInstanceShowName(value: string | string[]): string;
 export function countBy(collection: unknown[] | Record<string, unknown>, iteratee: string | number): Record<string, number>;
 
 // @public
+export function crontabFormat(crontabStr: string): string;
+
+// @public
 export function datetime(value: number | string, format: string): string;
 
 // @public
